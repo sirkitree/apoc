@@ -74,6 +74,8 @@ Each book directory contains:
 - **README.md** -- Source manuscripts, historical context, canonical status, full summary, key themes, and influence/legacy
 - **Translation files** -- One or more translations in PDF, Markdown, or HTML. Markdown files are best for reading and search; PDFs preserve scholarly formatting.
 
-Markdown files do not all share one layout -- the collection draws on several sources, and each keeps its own conventions. `books.json` declares the format of every file explicitly, with the chapter and verse patterns for each, so you do not have to sniff it.
+Markdown files do not all share one layout -- the collection draws on several sources, and each keeps its own conventions. `books.json` declares the format of every file explicitly, with the chapter and verse patterns for each, so you do not have to sniff it. Every markdown file is UTF-8 with LF line endings, so those patterns match whether you read a checkout or fetch the raw file over HTTP.
+
+Two texts carry their chapter and verse numbers inside the running prose rather than at the head of a line, and one of them, the Apocalypse of Moses, also has a rearranged companion file that is addressable verse by verse. Where a file's structure could only be described by hand -- which part of it is translation and which is the translator's own introduction and notes -- the manifest records that too, under `structure`.
 
 The [Wisdom of Solomon](books/Wisdom%20of%20Solomon/samples/) directory also contains sample retranslations of Chapter 1 in four styles: modern plain English, literary modern English, narrative storytelling, and annotated modern English. These are AI-generated adaptations, not translations, and are flagged `"scripture": false` in the manifest.

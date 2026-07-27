@@ -119,7 +119,8 @@ The Life of Adam and Eve spawned a rich tradition of derivative works across mul
 
 | File | Description |
 |------|-------------|
-| `Apocalypse_of_Moses_CCEL.md` | English translation of the Greek Apocalypse of Moses, sourced from the Christian Classics Ethereal Library (CCEL) -- a Markdown-formatted text suitable for reading and annotation. |
+| `Apocalypse_of_Moses_CCEL.md` | English translation of the Greek Apocalypse of Moses, sourced from the Christian Classics Ethereal Library (CCEL) -- a Markdown-formatted text suitable for reading and annotation. This is the edition of record. |
+| `Apocalypse_of_Moses_CCEL_verses.md` | The same translation, verse by verse. Charles set his chapter and verse numbers inside the running prose, which makes the CCEL file hard to cite from or display a passage at a time; here each number stands at the head of the passage it opens, as `1:1`, `1:2` and so on. Nothing of the translation was changed. Charles's verse divisions fall mid-sentence, as they do in his printed text. |
 | `Apocalypse_of_Moses.pdf` | PDF version of the Apocalypse of Moses (Greek recension) translation. |
 | `Life_of_Adam_and_Eve.pdf` | PDF version of the Life of Adam and Eve (Latin *Vita Adae et Evae*) translation. |
 
