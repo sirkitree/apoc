@@ -250,7 +250,7 @@ should be one: and every one should leave his own law.
 1:44. And all nations consented, according to the word of king
 Antiochus.
 
-1:45 And many of Israel consented to his service, and they sacrificed to
+1:45. And many of Israel consented to his service, and they sacrificed to
 idols, and profaned the sabbath.
 
 1:46. And the king sent letters by the hands of messengers to Jerusalem,
@@ -297,7 +297,9 @@ the cities of Juda round about:
 The abominable idol, etc... Viz., the statue of Jupiter Olympius.
 
 1:58. And they burnt incense, and sacrificed at the doors of the houses
-and in the streets.  1:59. And they cut in pieces, and burnt with fire
+and in the streets.
+
+1:59. And they cut in pieces, and burnt with fire
 the books of the law of God:
 
 1:60. And every one with whom the books of the testament of the Lord
@@ -326,7 +328,7 @@ death:
 1:67. And there was very great wrath upon the people.
 
 
-1 Machabees Chapter 2.
+1 Machabees Chapter 2
 
 The zeal and success of Mathathias. His exhortation to his sons at his
 death.
@@ -750,18 +752,18 @@ us: thou knowest what they intend against us.
 3:53. How shall we be able to stand before their face, unless thou, O
 God, help us?
 
-3:64. Then they sounded with trumpets, and cried out with a loud voice.
+3:54. Then they sounded with trumpets, and cried out with a loud voice.
 
-3:66. And after this, Judas appointed captains over the people, over
+3:55. And after this, Judas appointed captains over the people, over
 thousands, and over hundreds, and over fifties, and over tens.
 
-3:66. And he said to them that were building houses, or had betrothed
+3:56. And he said to them that were building houses, or had betrothed
 wives, or were planting vineyards, or were fearful, that they should
 return every man to his house, according to the law.
 
-3:67. So they removed the camp, and pitched on the south side of Emmaus.
+3:57. So they removed the camp, and pitched on the south side of Emmaus.
 
-3:68. And Judas said: Gird yourselves, and be valiant men, and be ready
+3:58. And Judas said: Gird yourselves, and be valiant men, and be ready
 against the morning, that you may fight with these nations that are
 assembled against us to destroy us and our sanctuary.
 
@@ -861,7 +863,7 @@ because he is good, because his mercy endureth for ever.
 
 4:25. So Israel had a great deliverance that day.
 
-4:26 And such of the strangers as escaped, went and told Lysias all that
+4:26. And such of the strangers as escaped, went and told Lysias all that
 had happened.
 
 4:27. And when he heard these things, he was amazed and discouraged:
@@ -1525,7 +1527,9 @@ he will not deceive us.
 will do you no harm, nor your friends.
 
 7:16. And they believed him. And he took threescore of them, and slew
-them in one day, according to the word that is written: 7:17. The flesh
+them in one day, according to the word that is written:
+
+7:17. The flesh
 of thy saints, and the blood of them they have shed round about
 Jerusalem, and there was none to bury them.
 
@@ -1538,7 +1542,9 @@ Bethzecha: and he sent, and took many of them that were fled away from
 him, and some of the people he killed, and threw them into a great pit.
 
 7:20. Then he committed the country to Alcimus, and left with him troops
-to help him. So Bacchides went away to the king.  7:21. But Alcimus did
+to help him. So Bacchides went away to the king.
+
+7:21. But Alcimus did
 what he could to maintain his chief priesthood.
 
 7:22. And they that disturbed the people resorted to him, and they got
@@ -1744,7 +1750,9 @@ be registered your confederates and friends.
 
 8:22. And this is the copy of the writing that they wrote back again,
 graven in tables of brass, and sent to Jerusalem, that it might be with
-them there for a memorial of the peace, and alliance.  8:23. GOOD
+them there for a memorial of the peace, and alliance.
+
+8:23. GOOD
 SUCCESS BE TO THE ROMANS, and to the people of the Jews by sea, and by
 land, for ever: and far be the sword and enemy from them.
 
@@ -1973,7 +1981,9 @@ and put them in the castle in Jerusalem in custody.
 9:54. Now in the year one hundred and fifty-three, the second month,
 Alcimus commanded the walls of the inner court of the sanctuary to be
 thrown down, and the works of the prophets to be destroyed: and he began
-to destroy. 9:55. At that time Alcimus was struck: and his works were
+to destroy.
+
+9:55. At that time Alcimus was struck: and his works were
 hindered, and his mouth was stopped, and he was taken with a palsy, so
 that he could no more speak a word, nor give order concerning his house.
 
@@ -2536,7 +2546,7 @@ fire to the city, and got many spoils that day, and delivered the king.
 as they would: and they were discouraged in their mind, and cried to the
 king, making supplication, and saying:
 
-1:50. Grant us peace, and let the Jews cease from assaulting us, and the
+11:50. Grant us peace, and let the Jews cease from assaulting us, and the
 city.
 
 11:51. And they threw down their arms, and made peace, and the Jews were
@@ -2559,7 +2569,9 @@ sent away, and they fought against Demetrius who turned his back and
 fled.
 
 11:56. And Tryphon took the elephants, and made himself master of
-Antioch.  11:57. And young Antiochus wrote to Jonathan, saying: I
+Antioch.
+
+11:57. And young Antiochus wrote to Jonathan, saying: I
 confirm thee in the high priesthood, and I appoint thee ruler over the
 four cities, and to be one of the king's friends.
 
@@ -2641,7 +2653,9 @@ said: Jonathan, the high priest, and the nation of the Jews, have sent
 us to renew the amity, and alliance, as it was before.
 
 12:4. And they gave them letters to their governors in every place, to
-conduct them into the land of Juda with peace.  12:5. And this is a copy
+conduct them into the land of Juda with peace.
+
+12:5. And this is a copy
 of the letters which Jonathan wrote to the Spartans:
 
 12:6. Jonathan, the high priest, and the ancients of the nation, and the

@@ -161,8 +161,13 @@ For many modern readers, especially those drawn to contemplative or mystical spi
 
 | File | Description |
 |------|-------------|
-| `Gospel_of_Thomas_Lambdin.pdf` | The widely-used English translation by Thomas O. Lambdin, originally published in *The Nag Hammadi Library in English* (1977), edited by James M. Robinson. One of the standard scholarly translations. |
 | `Gospel_of_Thomas_Mattison.md` | A public-domain English translation by Mark M. Mattison, based on the Coptic text of Nag Hammadi Codex II. Includes section headings for each saying and editorial notation for textual gaps and corrections. |
+
+The Thomas O. Lambdin translation from *The Nag Hammadi Library in English*
+(1977) was previously included here as a PDF. It is still under copyright
+(Brill / HarperCollins) and was removed. The Mattison translation above is the
+public domain equivalent. See [`NOTICE.md`](../../NOTICE.md) in the repository
+root.
 
 ---
 

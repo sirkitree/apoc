@@ -214,7 +214,7 @@ pride.
 
 1:30. And the priests sung hymns till the sacrifice was consumed.
 
-1:31 .And when the sacrifice was consumed, Nehemias commanded the water
+1:31. And when the sacrifice was consumed, Nehemias commanded the water
 that was left to be poured out upon the great stones.
 
 1:32. Which being done, there was kindled a flame from them: but it was
@@ -268,7 +268,7 @@ and saw the inheritance of God.
 carried in thither the tabernacle, and the ark, and the altar of
 incense, and so stopped the door.
 
-2:6 .Then some of them that followed him, came up to mark the place: but
+2:6. Then some of them that followed him, came up to mark the place: but
 they could not find it.
 
 2:7. And when Jeremias perceived it, he blamed them, saying: The place
@@ -1014,7 +1014,7 @@ and the skin of his head being drawn off, to chop off also the
 extremities of his hands and feet, the rest of his brethren and his
 mother looking on.
 
-7:6. And when he was now maimed in all parts, he commanded him, being
+7:5. And when he was now maimed in all parts, he commanded him, being
 yet alive, to be brought to the fire, and to be fried in the fryingpan:
 and while he was suffering therein long torments, the rest, together
 with the mother, exhorted one another to die manfully,
@@ -1026,7 +1026,9 @@ in his servants he will take pleasure.
 7:7. So when the first was dead after this manner, they brought the next
 to make him a mocking stock: and when they had pulled off the skin of
 his head with the hair, they asked him if he would eat, before he were
-punished throughout the whole body in every limb.  7:8. But he answered
+punished throughout the whole body in every limb.
+
+7:8. But he answered
 in his own language, and said: I will not do it. Wherefore he also, in
 the next place, received the torments of the first:
 
@@ -1055,7 +1057,9 @@ again by him; for, as to thee, thou shalt have no resurrection unto
 life.
 
 7:15. And when they had brought the fifth, they tormented him. But he,
-looking upon the king, 7:16. Said: Whereas thou hast power among men
+looking upon the king,
+
+7:16. Said: Whereas thou hast power among men
 though thou art corruptible, thou dost what thou wilt but think not that
 our nation is forsaken by God.
 
@@ -1509,7 +1513,9 @@ of his realm one Lysias, general of the army of Phenicia and Syria.
 
 10:12. For Ptolemee, that was called Macer, was determined to be
 strictly just to the Jews and especially by reason of the wrong that had
-been done them, and to deal peaceably with them.  10:13. But being
+been done them, and to deal peaceably with them.
+
+10:13. But being
 accused for this to Eupator by his friends, and being oftentimes called
 traitor, because he had left Cyprus, which Philometor had committed to
 him, and coming over to Antiochus the Illustrious, had revolted also
@@ -1546,7 +1552,9 @@ taking seventy thousand didrachmas, let some of them escape.
 
 10:21. But when it was told Machabeus what was done, he assembled the
 rulers of the people, and accused those men that they had sold their
-brethren for money, having let their adversaries escape.  10:22. So he
+brethren for money, having let their adversaries escape.
+
+10:22. So he
 put these traitors to death, and forthwith took the two towers.
 
 10:23. And having good success in arms, and all things he took in hand,
@@ -1556,7 +1564,7 @@ he slew more than twenty thousand in the two holds.
 called together a multitude of foreign troops, and assembled horsemen
 out of Asia, came as though he would take Judea by force of arms.
 
-10:26. But Machabeus, and they that were with him, when he drew near,
+10:25. But Machabeus, and they that were with him, when he drew near,
 prayed to the Lord, sprinkling earth upon their heads, and girding their
 loins with haircloth,
 
@@ -1682,7 +1690,9 @@ effect: Lysias, to the people of the Jews, greeting.
 
 11:17. John, and Abesalom, who were sent from you, delivering your
 writings, requested that I would accomplish those things which were
-signified by them.  11:18. Therefore whatsoever things could be reported
+signified by them.
+
+11:18. Therefore whatsoever things could be reported
 to the king, I have represented to him: and he hath granted as much as
 the matter permitted.
 

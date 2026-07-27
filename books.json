@@ -1,0 +1,1803 @@
+{
+  "name": "Apocryphal, Deuterocanonical & Pseudepigraphal Texts",
+  "repository": "https://github.com/sirkitree/apoc",
+  "manifestVersion": "1.0",
+  "description": "Machine-readable index of the collection. Every text file is listed with its format, edition, translator, source and rights basis, so that a consumer need not guess any of them from the filename or sniff the layout.",
+  "readingOrder": "The `phase` and `order` fields reproduce the reading order set out in README.md: phase 1 is the deuterocanonical core, phase 2 the pseudepigrapha and apocalyptic literature, phase 3 the New Testament apocrypha and Gnostic texts.",
+  "conventions": {
+    "paths": "All paths are relative to the repository root and use forward slashes. Directory and file names are not derivable from the book name; always use the paths given here.",
+    "primary": "A file marked \"primary\": true is the recommended machine-readable edition of that text. Where a book has several primary files (Additions to Daniel) they are separate compositions, not alternative editions of one.",
+    "scripture": "A file marked \"scripture\": false is not a translation of the ancient text and must not be served as one. See nonScripture below for the full list.",
+    "verseOrder": "Every text file carries a verseOrder derived by reading the file. \"monotonic\": true means verse numbers ascend within each chapter. Where it is false, either outOfOrderChapters names the chapters that do not -- Charles transposed verses he judged displaced, and this collection follows his arrangement rather than renumbering it -- or \"scope\": \"whole file\" means the file has no chapter headings and its numbers do not form a single ascending run. Do not assume a monotonic sequence when iterating.",
+    "rights": "Every file carries a rights status and a basis. \"public-domain\" is asserted per file, never in bulk. Files whose basis could not be established carry status \"unverified\"; one file is \"cc-by-nc-nd-4.0\" and is NOT public domain. See NOTICE.md for the full record."
+  },
+  "formats": {
+    "chapter-caps-verse-lines": {
+      "media": "text/markdown",
+      "description": "Chapter headings on their own line as `CHAPTER <n>`. Each verse is a single blank-line-separated line beginning `<n> ` (verse number, space, text).",
+      "chapterHeading": "^CHAPTER (\\d+)$",
+      "verse": "^(\\d+) (.*)$"
+    },
+    "chapter-title-verse-lines": {
+      "media": "text/markdown",
+      "description": "As chapter-caps-verse-lines, but the chapter heading is title-cased: `Chapter <n>`.",
+      "chapterHeading": "^Chapter (\\d+)$",
+      "verse": "^(\\d+) (.*)$"
+    },
+    "chapter-caps-cv-lines": {
+      "media": "text/markdown",
+      "description": "Chapter headings as `CHAPTER <n>`. Verses are consecutive (not blank-line-separated) lines beginning `<chapter>:<verse> `.",
+      "chapterHeading": "^CHAPTER (\\d+)$",
+      "verse": "^(\\d+):(\\d+) (.*)$"
+    },
+    "verse-lines": {
+      "media": "text/markdown",
+      "description": "Single-chapter text with no chapter headings. Each verse is a blank-line-separated line beginning `<n> `.",
+      "chapterHeading": null,
+      "verse": "^(\\d+) (.*)$"
+    },
+    "gutenberg-douay-rheims": {
+      "media": "text/markdown",
+      "description": "Project Gutenberg Douay-Rheims layout. Chapter headings are `<Book name> Chapter <n>`. Verses are blank-line-separated paragraphs opening `<chapter>:<verse>. ` and may wrap over several lines. Douay editorial footnotes appear between verses as ordinary paragraphs with no verse marker; a parser that assumes every paragraph is a verse will ingest them as scripture. Each file retains the Project Gutenberg header and footer, which are not part of the text.",
+      "chapterHeading": "^(.+) Chapter (\\d+)$",
+      "verse": "^(\\d+):(\\d+)\\. (.*)$",
+      "caveats": [
+        "editorial footnotes interleaved between verses",
+        "Project Gutenberg header and footer present"
+      ]
+    },
+    "cv-paragraphs": {
+      "media": "text/markdown",
+      "description": "Chapter headings as `CHAPTER <n>` (optionally followed by a roman numeral in parentheses), with the translator's own section headings on their own lines above them. Verses are blank-line-separated paragraphs opening `<chapter>:<verse> `. A verse may carry continuation lines indented four spaces, which preserve the translator's line layout in poetic passages. A continuation line of the form `[<witness>: ...]` is apparatus -- a parallel recension in another language -- not part of the verse.",
+      "chapterHeading": "^CHAPTER (\\d+)( \\([IVXLC]+\\))?$",
+      "verse": "^(\\d+):(\\d+) (.*)$",
+      "continuation": "^    (.*)$",
+      "apparatus": "^    \\[([^:]+): (.*)\\]$",
+      "caveats": [
+        "verses are not guaranteed to appear in numerical order; see verseOrder on each file"
+      ]
+    },
+    "numbered-paragraphs": {
+      "media": "text/markdown",
+      "description": "No chapters. Sections or paragraphs are blank-line-separated and open `<n>. `.",
+      "chapterHeading": null,
+      "verse": "^(\\d+)\\. (.*)$"
+    },
+    "paren-numbered-verses": {
+      "media": "text/markdown",
+      "description": "Chapter headings as `CHAPTER <n>`; verses open `<n>) `. Verse numbers run continuously across the whole text rather than restarting at each chapter.",
+      "chapterHeading": "^CHAPTER (\\d+)$",
+      "verse": "^(\\d+)\\) (.*)$"
+    },
+    "sectioned-prose": {
+      "media": "text/markdown",
+      "description": "Named section headings on their own lines, followed by prose paragraphs. No verse numbers. Any bare numbers in the running text are manuscript page numbers, not verses.",
+      "chapterHeading": null,
+      "verse": null
+    },
+    "prose-with-apparatus": {
+      "media": "text/markdown",
+      "description": "Continuous prose in which the translator's introduction, notes and the text itself are interleaved, with no consistent machine-readable structure. Suitable for reading and full-text search; not suitable for verse-level extraction without hand work.",
+      "chapterHeading": null,
+      "verse": null
+    },
+    "pdf": {
+      "media": "application/pdf",
+      "description": "PDF. Some are digital typesetting with extractable text; some are image scans with none."
+    },
+    "html": {
+      "media": "text/html",
+      "description": "HTML page, including the source site's own markup and navigation."
+    },
+    "png": {
+      "media": "image/png",
+      "description": "Raster image."
+    },
+    "mp3": {
+      "media": "audio/mpeg",
+      "description": "Audio recording."
+    }
+  },
+  "rightsBasis": {
+    "dedication": "The translator or publisher has explicitly placed the work in the public domain.",
+    "age-us-uk": "Out of copyright by publication date in the United States and by author's death plus 70 years in the UK/EU.",
+    "licensed": "Under copyright, but distributed under a license that permits redistribution. Not public domain.",
+    "unverified": "No dedication found and no translator or date established. Treated as unresolved; see NOTICE.md."
+  },
+  "books": [
+    {
+      "id": "wisdom-of-solomon",
+      "name": "Wisdom of Solomon",
+      "phase": 1,
+      "order": 1,
+      "directory": "books/Wisdom of Solomon",
+      "readme": "books/Wisdom of Solomon/README.md",
+      "files": [
+        {
+          "path": "books/Wisdom of Solomon/Wisdom_of_Solomon_KJV.md",
+          "format": "chapter-caps-verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Wisdom of Solomon/Wisdom_of_Solomon_KJV.pdf",
+          "format": "pdf",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Wisdom of Solomon/Wisdom_of_Solomon_WEB.pdf",
+          "format": "pdf",
+          "edition": "World English Bible with Deuterocanon",
+          "translator": "Michael Paul Johnson (ed.), from the American Standard Version",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-webbe"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "The Book of Wisdom"
+      ]
+    },
+    {
+      "id": "sirach",
+      "name": "Sirach",
+      "phase": 1,
+      "order": 2,
+      "directory": "books/Sirach",
+      "readme": "books/Sirach/README.md",
+      "files": [
+        {
+          "path": "books/Sirach/Sirach-Douay-Rheims.md",
+          "format": "gutenberg-douay-rheims",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Chapter headings read `Ecclesiasticus Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Sirach/Sirach-WEB.pdf",
+          "format": "pdf",
+          "edition": "World English Bible with Deuterocanon",
+          "translator": "Michael Paul Johnson (ed.), from the American Standard Version",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-webbe"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Sirach/Ecclesiasticus-The-Book-of-Sirach.pdf",
+          "format": "pdf",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "Ecclesiasticus",
+        "The Wisdom of Jesus son of Sirach"
+      ]
+    },
+    {
+      "id": "tobit",
+      "name": "Tobit",
+      "phase": 1,
+      "order": 3,
+      "directory": "books/Tobit",
+      "readme": "books/Tobit/README.md",
+      "files": [
+        {
+          "path": "books/Tobit/Tobias_Douay-Rheims_Gutenberg.md",
+          "format": "gutenberg-douay-rheims",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Chapter headings read `Tobias Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Tobit/Tobit_CPDV_sacredbible.html",
+          "format": "html",
+          "edition": "Catholic Public Domain Version",
+          "translator": "Ronald L. Conte Jr.",
+          "source": {
+            "name": "Sacred Bible",
+            "url": "https://www.sacredbible.org/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "notes": "The translator's public domain dedication is on the source site, not in this file."
+        },
+        {
+          "path": "books/Tobit/Book_of_Tobit_Archive.org.pdf",
+          "format": "pdf",
+          "edition": "unidentified",
+          "translator": null,
+          "source": {
+            "name": "Internet Archive",
+            "url": "https://archive.org/"
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Tobit/the_weight_of_prayers.md",
+          "format": "prose-with-apparatus",
+          "edition": null,
+          "translator": null,
+          "source": {
+            "name": "original work",
+            "url": null
+          },
+          "rights": {
+            "status": "cc-by-4.0",
+            "basis": "owner-authored"
+          },
+          "scripture": false,
+          "notes": "An original creative work responding to Tobit. Not scripture; do not serve it as a translation."
+        },
+        {
+          "path": "books/Tobit/the_weight_of_prayers.mp3",
+          "format": "mp3",
+          "edition": null,
+          "translator": null,
+          "source": {
+            "name": "original work",
+            "url": null
+          },
+          "rights": {
+            "status": "cc-by-4.0",
+            "basis": "owner-authored"
+          },
+          "scripture": false,
+          "notes": "Audio narration of the_weight_of_prayers.md."
+        },
+        {
+          "path": "books/Tobit/raphael_revealed.png",
+          "format": "png",
+          "edition": null,
+          "translator": null,
+          "source": {
+            "name": "original work",
+            "url": null
+          },
+          "rights": {
+            "status": "cc-by-4.0",
+            "basis": "owner-authored"
+          },
+          "scripture": false,
+          "notes": "An original illustration for Tobit."
+        }
+      ],
+      "alsoKnownAs": [
+        "Tobias"
+      ]
+    },
+    {
+      "id": "judith",
+      "name": "Judith",
+      "phase": 1,
+      "order": 4,
+      "directory": "books/Judith",
+      "readme": "books/Judith/README.md",
+      "files": [
+        {
+          "path": "books/Judith/judith-douay-rheims.md",
+          "format": "gutenberg-douay-rheims",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Chapter headings read `Judith Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Judith/judith-kjv-ebible.pdf",
+          "format": "pdf",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Judith/judith-web-ebible.pdf",
+          "format": "pdf",
+          "edition": "World English Bible with Deuterocanon",
+          "translator": "Michael Paul Johnson (ed.), from the American Standard Version",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-webbe"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        }
+      ]
+    },
+    {
+      "id": "baruch",
+      "name": "Baruch",
+      "phase": 1,
+      "order": 5,
+      "directory": "books/Baruch",
+      "readme": "books/Baruch/README.md",
+      "files": [
+        {
+          "path": "books/Baruch/Baruch_WEB.md",
+          "format": "chapter-title-verse-lines",
+          "edition": "World English Bible with Deuterocanon",
+          "translator": "Michael Paul Johnson (ed.), from the American Standard Version",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-webbe"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Includes the Letter of Jeremiah as chapter 6, following the Vulgate convention.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Baruch/Baruch_KJV.pdf",
+          "format": "pdf",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "Baruch and the Letter of Jeremiah"
+      ]
+    },
+    {
+      "id": "1-maccabees",
+      "name": "1 Maccabees",
+      "phase": 1,
+      "order": 6,
+      "directory": "books/1 Maccabees",
+      "readme": "books/1 Maccabees/README.md",
+      "files": [
+        {
+          "path": "books/1 Maccabees/1_Maccabees_KJV.md",
+          "format": "chapter-caps-cv-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/1 Maccabees/1_Maccabees_Douay_Rheims.md",
+          "format": "gutenberg-douay-rheims",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapter headings read `1 Machabees Chapter <n>`. Nine transcription defects in the Project Gutenberg text were corrected: `1:50.` in the middle of chapter 11 (a dropped digit, now `11:50.`), the misnumbered run `3:64, 3:66, 3:66, 3:67, 3:68` between 3:53 and 3:59 (now `3:54`-`3:58`), missing periods on the 1:45 and 4:26 markers, and seven verses that Gutenberg ran onto the end of the previous verse's line rather than starting a paragraph. No word of the text was changed.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        }
+      ],
+      "alsoKnownAs": [
+        "1 Machabees"
+      ]
+    },
+    {
+      "id": "2-maccabees",
+      "name": "2 Maccabees",
+      "phase": 1,
+      "order": 7,
+      "directory": "books/2 Maccabees",
+      "readme": "books/2 Maccabees/README.md",
+      "files": [
+        {
+          "path": "books/2 Maccabees/2_Maccabees_DRC.md",
+          "format": "gutenberg-douay-rheims",
+          "edition": "Douay-Rheims, Challoner revision (1749-1752)",
+          "translator": "Gregory Martin and the Douay-Rheims translators; revised by Richard Challoner",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Chapter headings read `2 Machabees Chapter <n>`. Seven transcription defects in the Project Gutenberg text were corrected: duplicate markers at 7:6 and 10:26 (the first of each is 7:5 and 10:25), misplaced periods on the 1:31 and 2:6 markers, and five verses that Gutenberg ran onto the end of the previous verse's line rather than starting a paragraph. No word of the text was changed.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/2 Maccabees/2_Maccabees_KJV.pdf",
+          "format": "pdf",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "2 Machabees"
+      ]
+    },
+    {
+      "id": "additions-to-esther",
+      "name": "Additions to Esther",
+      "phase": 1,
+      "order": 8,
+      "directory": "books/Additions to Esther",
+      "readme": "books/Additions to Esther/README.md",
+      "files": [
+        {
+          "path": "books/Additions to Esther/Additions_to_Esther_KJV.md",
+          "format": "verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "The KJV follows the Vulgate numbering, chapters 10-16. The file carries no chapter headings, and the verse numbers restart within each of those chapters, so read as one flat run they are not ascending. Verse 1 of the file is Esther 10:4.",
+          "verseOrder": {
+            "monotonic": false,
+            "scope": "whole file"
+          }
+        },
+        {
+          "path": "books/Additions to Esther/Additions_to_Esther_WEB.pdf",
+          "format": "pdf",
+          "edition": "World English Bible with Deuterocanon",
+          "translator": "Michael Paul Johnson (ed.), from the American Standard Version",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-webbe"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Esther/Additions_to_Esther_Wycliffe.pdf",
+          "format": "pdf",
+          "edition": "Wycliffe's Bible with Modern Spelling",
+          "translator": "Terence P. Noble",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=engwyc2017"
+          },
+          "rights": {
+            "status": "cc-by-nc-nd-4.0",
+            "basis": "licensed"
+          },
+          "scripture": true,
+          "notes": "NOT public domain. Copyright (c) 2001-2015 Terry Noble, licensed CC BY-NC-ND 4.0. Redistribution with attribution is permitted; commercial use and derivative works are not. Exclude this file from any public-domain-only selection."
+        }
+      ],
+      "alsoKnownAs": [
+        "The Rest of the Chapters of the Book of Esther"
+      ]
+    },
+    {
+      "id": "additions-to-daniel",
+      "name": "Additions to Daniel",
+      "phase": 1,
+      "order": 9,
+      "directory": "books/Additions to Daniel",
+      "readme": "books/Additions to Daniel/README.md",
+      "files": [
+        {
+          "path": "books/Additions to Daniel/Susanna_KJV.md",
+          "format": "verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Additions to Daniel/Bel_and_the_Dragon_KJV.md",
+          "format": "verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Additions to Daniel/Prayer_of_Azariah_and_Song_of_Three_Holy_Children_KJV.md",
+          "format": "verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Additions to Daniel/Susanna_KJV.htm",
+          "format": "html",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Bel_and_the_Dragon_KJV.htm",
+          "format": "html",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Song_of_Three_Holy_Children_KJV.htm",
+          "format": "html",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Susanna_RV.pdf",
+          "format": "pdf",
+          "edition": "Revised Version with Apocrypha (1895)",
+          "translator": "Revised Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-rv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Song_of_Three_Holy_Children_RV.pdf",
+          "format": "pdf",
+          "edition": "Revised Version with Apocrypha (1895)",
+          "translator": "Revised Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-rv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Bel_and_the_Dragon_RV.pdf",
+          "format": "pdf",
+          "edition": "Revised Version with Apocrypha (1895)",
+          "translator": "Revised Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-rv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Bel_and_the_Dragon_LXX2012.pdf",
+          "format": "pdf",
+          "edition": "LXX2012: Septuagint in American English",
+          "translator": "revision of Sir Lancelot C. L. Brenton (1851)",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-lxx2012"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Additions to Daniel/Three_Additions_to_Daniel_Daubney_Study.md",
+          "format": "prose-with-apparatus",
+          "edition": "W. H. Daubney, The Three Additions to Daniel: A Study (1906)",
+          "translator": "W. H. Daubney",
+          "source": {
+            "name": "Project Gutenberg",
+            "url": "https://www.gutenberg.org/ebooks/author/8486"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": false,
+          "notes": "A scholarly study, not a translation of the text. Do not serve it as scripture."
+        }
+      ],
+      "notes": "Three separate compositions: the Prayer of Azariah and the Song of the Three Holy Children, Susanna, and Bel and the Dragon. Each has its own file."
+    },
+    {
+      "id": "1-esdras",
+      "name": "1 Esdras",
+      "phase": 1,
+      "order": 10,
+      "directory": "books/1 Esdras",
+      "readme": "books/1 Esdras/README.md",
+      "files": [
+        {
+          "path": "books/1 Esdras/1_Esdras_KJV.md",
+          "format": "chapter-caps-verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "9 chapters, 448 verses. Called 3 Esdras in the Vulgate and Esdras A in the Septuagint.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        }
+      ],
+      "alsoKnownAs": [
+        "3 Esdras (Vulgate)",
+        "Esdras A (Septuagint)"
+      ]
+    },
+    {
+      "id": "2-esdras",
+      "name": "2 Esdras",
+      "phase": 1,
+      "order": 11,
+      "directory": "books/2 Esdras",
+      "readme": "books/2 Esdras/README.md",
+      "files": [
+        {
+          "path": "books/2 Esdras/2_Esdras_KJV.md",
+          "format": "chapter-caps-verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "16 chapters, 874 verses. Chapters 3-14 are the Jewish apocalypse known in scholarship as 4 Ezra; chapters 1-2 and 15-16 are later Christian additions. This 1611 text LACKS the passage at 7:36-105, which was not recovered until 1875, so its chapter 7 verse numbers diverge from modern critical editions after 7:35.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        }
+      ],
+      "alsoKnownAs": [
+        "4 Esdras (Vulgate)",
+        "4 Ezra (chapters 3-14)",
+        "The Apocalypse of Ezra"
+      ]
+    },
+    {
+      "id": "prayer-of-manasseh",
+      "name": "Prayer of Manasseh",
+      "phase": 1,
+      "order": 12,
+      "directory": "books/Prayer of Manasseh",
+      "readme": "books/Prayer of Manasseh/README.md",
+      "files": [
+        {
+          "path": "books/Prayer of Manasseh/Prayer_of_Manasseh_KJV.md",
+          "format": "verse-lines",
+          "edition": "King James Version Apocrypha (1611/1769)",
+          "translator": "King James Version translators",
+          "source": {
+            "name": "eBible.org",
+            "url": "https://ebible.org/find/details.php?id=eng-kjv"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "A single chapter of 15 verses; the file has no chapter heading. One reading is corrected against the printed King James text: at verse 13 the eBible.org transcription reads 'mine iniquites', a slip found nowhere else in that edition, given here as 'mine iniquities'. The correction is recorded in the file header.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        }
+      ],
+      "alsoKnownAs": [
+        "The Prayer of Manasses King of Judah"
+      ]
+    },
+    {
+      "id": "1-enoch",
+      "name": "1 Enoch",
+      "phase": 2,
+      "order": 13,
+      "directory": "books/1 Enoch",
+      "readme": "books/1 Enoch/README.md",
+      "files": [
+        {
+          "path": "books/1 Enoch/1_Enoch_RH_Charles.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, The Book of Enoch (S.P.C.K., 1917)",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "All 108 chapters, 1,052 verses. Charles's editorial notation is preserved: [ ] editorial deletion, < > editorial addition, doubled brackets a reading restored from a secondary witness, dagger a corrupt reading. Where Charles printed a named witness in another language alongside the Ethiopic, the Ethiopic is the running text and the other witness follows as an indented `[Greek: ...]` or `[Latin Fragment: ...]` line, which is apparatus and not verse text. Where he printed an unnamed parallel column -- the doublets at 90:13-15 and 90:16-18 -- both belong to the chapter and both appear as ordinary verses. A small number of verse numbers that Charles set mid-clause are absorbed into the preceding verse. VERSES ARE NOT ALWAYS IN NUMERICAL ORDER: chapters 60, 90 and 106 follow Charles's transposed arrangement.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "60",
+              "90",
+              "106"
+            ]
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/01_Book_of_the_Watchers.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 1-36, extracted from 1_Enoch_RH_Charles.md.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/02_Book_of_Parables.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 37-71.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "60"
+            ]
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/03_Book_of_the_Heavenly_Luminaries.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 72-82.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/04_Book_of_Dream_Visions.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 83-90.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "90"
+            ]
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/05_Epistle_of_Enoch.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 91-105.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/06_Fragment_of_the_Book_of_Noah.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapters 106-107.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "106"
+            ]
+          }
+        },
+        {
+          "path": "books/1 Enoch/sections/07_Appendix_Another_Book_of_Enoch.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Chapter 108.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/1 Enoch/1_Enoch_RH_Charles.pdf",
+          "format": "pdf",
+          "edition": "R. H. Charles, 1917",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/1 Enoch/Book_of_Enoch.pdf",
+          "format": "pdf",
+          "edition": "R. H. Charles",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Image scan; no extractable text."
+        }
+      ],
+      "alsoKnownAs": [
+        "Ethiopic Book of Enoch"
+      ],
+      "notes": "The files under sections/ are extracts of 1_Enoch_RH_Charles.md, not independent editions. Reading both will double-count."
+    },
+    {
+      "id": "2-enoch",
+      "name": "2 Enoch",
+      "phase": 2,
+      "order": 14,
+      "directory": "books/2 Enoch",
+      "readme": "books/2 Enoch/README.md",
+      "files": [
+        {
+          "path": "books/2 Enoch/The_Second_Book_of_Enoch_Morfill.md",
+          "format": "chapter-caps-verse-lines",
+          "edition": "W. R. Morfill's translation from the Slavonic, in Rutherford H. Platt, Jr. (ed.), The Forgotten Books of Eden (1926)",
+          "translator": "W. R. Morfill",
+          "source": {
+            "name": "English Wikisource",
+            "url": "https://en.wikisource.org/wiki/The_Forgotten_Books_of_Eden/The_Book_of_the_Secrets_of_Enoch"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "68 chapters, 321 verses.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/2 Enoch/The_Second_Book_Of_Enoch.pdf",
+          "format": "pdf",
+          "edition": "Morfill / Platt",
+          "translator": "W. R. Morfill",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "The Book of the Secrets of Enoch",
+        "Slavonic Enoch"
+      ]
+    },
+    {
+      "id": "jubilees",
+      "name": "Jubilees",
+      "phase": 2,
+      "order": 15,
+      "directory": "books/Jubilees",
+      "readme": "books/Jubilees/README.md",
+      "files": [
+        {
+          "path": "books/Jubilees/Book_of_Jubilees_RH_Charles.md",
+          "format": "cv-paragraphs",
+          "edition": "R. H. Charles, in The Apocrypha and Pseudepigrapha of the Old Testament (Oxford: Clarendon Press, 1913)",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "pseudepigrapha.com (transcription by Joshua Williams, Northwest Nazarene College)",
+            "url": "http://www.pseudepigrapha.com/jubilees/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "50 chapters, 1,306 verses. A PROLOGUE section precedes chapter 1. Each chapter opens with a line beginning `Argument: ` -- Charles's own prose summary of the chapter, not scripture. Verse divisions follow the transcription; one division it had lost, between 1:8 and 1:9, has been restored.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Jubilees/Book_of_Jubilees.pdf",
+          "format": "pdf",
+          "edition": "R. H. Charles (S.P.C.K., London, 1917)",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "Internet Sacred Text Archive",
+            "url": "https://sacred-texts.com/bib/jub/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        }
+      ],
+      "alsoKnownAs": [
+        "The Little Genesis",
+        "Leptogenesis"
+      ]
+    },
+    {
+      "id": "life-of-adam-and-eve",
+      "name": "Life of Adam and Eve",
+      "phase": 2,
+      "order": 16,
+      "directory": "books/Life of Adam and Eve",
+      "readme": "books/Life of Adam and Eve/README.md",
+      "files": [
+        {
+          "path": "books/Life of Adam and Eve/Apocalypse_of_Moses_CCEL.md",
+          "format": "prose-with-apparatus",
+          "edition": "R. H. Charles, The Apocrypha and Pseudepigrapha of the Old Testament (1913)",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "Christian Classics Ethereal Library",
+            "url": "https://www.ccel.org/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "The Greek recension. Chapter numbers are lower-case roman and verse numbers are set inline within indented prose; there is no line-per-verse structure."
+        },
+        {
+          "path": "books/Life of Adam and Eve/Apocalypse_of_Moses.pdf",
+          "format": "pdf",
+          "edition": "R. H. Charles, 1913",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "Scriptural-Truth.com",
+            "url": "https://www.scriptural-truth.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Life of Adam and Eve/Life_of_Adam_and_Eve.pdf",
+          "format": "pdf",
+          "edition": "modern translation of the Latin Vita Adae et Evae",
+          "translator": "B. Custis, with G. Anderson and R. Layton",
+          "source": {
+            "name": "Scriptural-Truth.com",
+            "url": "https://www.scriptural-truth.com/"
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true,
+          "notes": "A modern scholarly translation with no date or rights statement. See NOTICE.md."
+        }
+      ],
+      "alsoKnownAs": [
+        "Apocalypse of Moses",
+        "Vita Adae et Evae"
+      ]
+    },
+    {
+      "id": "testament-of-solomon",
+      "name": "Testament of Solomon",
+      "phase": 2,
+      "order": 17,
+      "directory": "books/Testament of Solomon",
+      "readme": "books/Testament of Solomon/README.md",
+      "files": [
+        {
+          "path": "books/Testament of Solomon/testament-of-solomon.md",
+          "format": "numbered-paragraphs",
+          "edition": "F. C. Conybeare, Jewish Quarterly Review (1898)",
+          "translator": "F. C. Conybeare",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Testament of Solomon/testament-of-solomon-conybeare.pdf",
+          "format": "pdf",
+          "edition": "F. C. Conybeare, Jewish Quarterly Review (1898)",
+          "translator": "F. C. Conybeare",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        }
+      ]
+    },
+    {
+      "id": "gospel-of-james",
+      "name": "Gospel of James",
+      "phase": 3,
+      "order": 18,
+      "directory": "books/Gospel of James",
+      "readme": "books/Gospel of James/README.md",
+      "files": [
+        {
+          "path": "books/Gospel of James/Gospel_of_James.md",
+          "format": "numbered-paragraphs",
+          "edition": "Roberts-Donaldson, Ante-Nicene Fathers",
+          "translator": "Alexander Roberts and James Donaldson",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "The file states 'This text is in the public domain.'",
+          "verseOrder": {
+            "monotonic": true
+          }
+        }
+      ],
+      "alsoKnownAs": [
+        "Protoevangelium of James",
+        "Infancy Gospel of James"
+      ]
+    },
+    {
+      "id": "gospel-of-thomas",
+      "name": "Gospel of Thomas",
+      "phase": 3,
+      "order": 19,
+      "directory": "books/Gospel of Thomas",
+      "readme": "books/Gospel of Thomas/README.md",
+      "files": [
+        {
+          "path": "books/Gospel of Thomas/Gospel_of_Thomas_Mattison.md",
+          "format": "sectioned-prose",
+          "edition": "Mark M. Mattison, from Nag Hammadi Codex II, 2",
+          "translator": "Mark M. Mattison",
+          "source": {
+            "name": "gospels.net",
+            "url": "https://www.gospels.net/thomas"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Section headings read `Saying <n>: <title>`, one per logion."
+        }
+      ],
+      "notes": "The Thomas O. Lambdin translation (The Nag Hammadi Library in English, 1977) was removed from this directory: it is under copyright. See NOTICE.md."
+    },
+    {
+      "id": "gospel-of-mary",
+      "name": "Gospel of Mary",
+      "phase": 3,
+      "order": 20,
+      "directory": "books/Gospel of Mary",
+      "readme": "books/Gospel of Mary/README.md",
+      "files": [
+        {
+          "path": "books/Gospel of Mary/Gospel_of_Mary_Mattison.md",
+          "format": "sectioned-prose",
+          "edition": "Mark M. Mattison, from Papyrus Berolinensis 8502, 1",
+          "translator": "Mark M. Mattison",
+          "source": {
+            "name": "gospels.net",
+            "url": "https://www.gospels.net/mary"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Bare numbers in the running text are manuscript page numbers, not verses."
+        },
+        {
+          "path": "books/Gospel of Mary/Gospel_of_Mary_Interlinear.pdf",
+          "format": "pdf",
+          "edition": "Mark M. Mattison, Coptic-English interlinear (2013)",
+          "translator": "Mark M. Mattison",
+          "source": {
+            "name": "gospels.net",
+            "url": "https://www.gospels.net/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "notes": "Believed covered by Mattison's standard public domain dedication; the PDF itself carries none."
+        },
+        {
+          "path": "books/Gospel of Mary/Gospel_of_Mary_ECW.md",
+          "format": "paren-numbered-verses",
+          "edition": "unattributed; wording matches the MacRae-Wilson-Parrott translation in The Nag Hammadi Library in English",
+          "translator": null,
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/text/gospelmary.html"
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true,
+          "notes": "Probably under copyright. Same source volume as the Isenberg and Lambdin translations already removed from this repository. See NOTICE.md.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Gospel of Mary/Gospel_of_Mary_Jenott.pdf",
+          "format": "pdf",
+          "edition": "Lance Jenott (2018)",
+          "translator": "Lance Jenott",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true,
+          "notes": "A translation this recent is under copyright unless released by the translator. See NOTICE.md."
+        }
+      ]
+    },
+    {
+      "id": "gospel-of-philip",
+      "name": "Gospel of Philip",
+      "phase": 3,
+      "order": 21,
+      "directory": "books/Gospel of Philip",
+      "readme": "books/Gospel of Philip/README.md",
+      "files": [
+        {
+          "path": "books/Gospel of Philip/Gospel_of_Philip_Mattison.md",
+          "format": "sectioned-prose",
+          "edition": "Mark M. Mattison, from Nag Hammadi Codex II, 3",
+          "translator": "Mark M. Mattison",
+          "source": {
+            "name": "gospels.net",
+            "url": "https://www.gospels.net/philip"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Bare numbers in the running text are codex page numbers, not verses. The final section, NOTES ON TRANSLATION, is the translator's apparatus rather than text."
+        }
+      ],
+      "notes": "The Wesley W. Isenberg translation (The Nag Hammadi Library) was removed from this directory: it is under copyright. See NOTICE.md."
+    },
+    {
+      "id": "gospel-of-judas",
+      "name": "Gospel of Judas",
+      "phase": 3,
+      "order": 22,
+      "directory": "books/Gospel of Judas",
+      "readme": "books/Gospel of Judas/README.md",
+      "files": [
+        {
+          "path": "books/Gospel of Judas/Gospel_of_Judas_public_domain.md",
+          "format": "sectioned-prose",
+          "edition": "Mark M. Mattison, from Codex Tchacos 3",
+          "translator": "Mark M. Mattison",
+          "source": {
+            "name": "gospels.net",
+            "url": "https://www.gospels.net/judas"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "dedication"
+          },
+          "scripture": true,
+          "primary": true
+        },
+        {
+          "path": "books/Gospel of Judas/Gospel_of_Judas.pdf",
+          "format": "pdf",
+          "edition": "unidentified",
+          "translator": null,
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true,
+          "notes": "See NOTICE.md."
+        },
+        {
+          "path": "books/Gospel of Judas/Gospel_of_Judas_scriptural-truth.pdf",
+          "format": "pdf",
+          "edition": "unidentified",
+          "translator": null,
+          "source": {
+            "name": "Scriptural-Truth.com",
+            "url": "https://www.scriptural-truth.com/"
+          },
+          "rights": {
+            "status": "unverified",
+            "basis": "unverified"
+          },
+          "scripture": true,
+          "notes": "See NOTICE.md."
+        }
+      ]
+    },
+    {
+      "id": "acts-of-paul-and-thecla",
+      "name": "Acts of Paul and Thecla",
+      "phase": 3,
+      "order": 23,
+      "directory": "books/Acts of Paul and Thecla",
+      "readme": "books/Acts of Paul and Thecla/README.md",
+      "files": [
+        {
+          "path": "books/Acts of Paul and Thecla/Acts_of_Paul_and_Thecla_ANF.md",
+          "format": "numbered-paragraphs",
+          "edition": "Alexander Walker, Ante-Nicene Fathers vol. 8 (1886)",
+          "translator": "Alexander Walker",
+          "source": {
+            "name": "converted from the New Advent HTML in this directory",
+            "url": "https://www.newadvent.org/fathers/0816.htm"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "32 numbered paragraphs. The numbers are paragraph numbers of the New Advent edition, not the chapter numbers of the printed Ante-Nicene Fathers text, which divides the work differently.",
+          "verseOrder": {
+            "monotonic": true
+          }
+        },
+        {
+          "path": "books/Acts of Paul and Thecla/Acts_of_Paul_and_Thecla_newadvent.html",
+          "format": "html",
+          "edition": "Alexander Walker, Ante-Nicene Fathers vol. 8 (1886)",
+          "translator": "Alexander Walker",
+          "source": {
+            "name": "New Advent",
+            "url": "https://www.newadvent.org/fathers/0816.htm"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Contains New Advent's own scripture cross-reference links inside the text, in <span class=\"stiki\"> elements. Strip them before treating the page as the translation."
+        },
+        {
+          "path": "books/Acts of Paul and Thecla/The Acts of Paul and Thecla.pdf",
+          "format": "pdf",
+          "edition": "Jeremiah Jones, The Apocryphal New Testament (1820)",
+          "translator": "Jeremiah Jones",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "A different and older translation than the Walker text; its chapter and verse divisions do not match."
+        }
+      ]
+    },
+    {
+      "id": "apocalypse-of-peter",
+      "name": "Apocalypse of Peter",
+      "phase": 3,
+      "order": 24,
+      "directory": "books/Apocalypse of Peter",
+      "readme": "books/Apocalypse of Peter/README.md",
+      "files": [
+        {
+          "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James.md",
+          "format": "prose-with-apparatus",
+          "edition": "M. R. James, The Apocryphal New Testament (Oxford: Clarendon Press, 1924)",
+          "translator": "M. R. James",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "primary": true,
+          "notes": "Includes James's introduction and notes interleaved with the text, plus the Ethiopic version he argued best represents the original."
+        },
+        {
+          "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_Roberts-Donaldson.md",
+          "format": "numbered-paragraphs",
+          "edition": "Roberts-Donaldson, Ante-Nicene Fathers",
+          "translator": "Alexander Roberts and James Donaldson",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "notes": "Based on the Akhmim Greek fragment only, so much shorter than the James text. The file holds two independent numbered runs: the translated text, then a set of five patristic testimonia which restart at 1. Numbering is therefore not ascending across the file as a whole.",
+          "verseOrder": {
+            "monotonic": false,
+            "scope": "whole file"
+          }
+        },
+        {
+          "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James.html",
+          "format": "html",
+          "edition": "M. R. James, 1924",
+          "translator": "M. R. James",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_Roberts-Donaldson.html",
+          "format": "html",
+          "edition": "Roberts-Donaldson",
+          "translator": "Alexander Roberts and James Donaldson",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Apocalypse of Peter/The_Apocalypse_of_Peter_James.pdf",
+          "format": "pdf",
+          "edition": "M. R. James, 1924",
+          "translator": "M. R. James",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        },
+        {
+          "path": "books/Apocalypse of Peter/The_Apocalypse_of_Peter_Schaff.pdf",
+          "format": "pdf",
+          "edition": "Philip Schaff's collection, drawing on the Ante-Nicene Fathers",
+          "translator": "Philip Schaff (ed.)",
+          "source": {
+            "name": "unrecorded",
+            "url": null
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true
+        }
+      ]
+    }
+  ],
+  "nonScripture": [
+    {
+      "path": "books/Wisdom of Solomon/samples/1_modern_plain.md",
+      "format": "numbered-paragraphs",
+      "description": "AI-generated retranslation sample of Wisdom of Solomon chapter 1, modern plain English.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Wisdom of Solomon/samples/2_literary_modern.md",
+      "format": "numbered-paragraphs",
+      "description": "AI-generated retranslation sample of Wisdom of Solomon chapter 1, literary modern English.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Wisdom of Solomon/samples/3_narrative.md",
+      "format": "prose-with-apparatus",
+      "description": "AI-generated retelling of Wisdom of Solomon chapter 1 as narrative.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Wisdom of Solomon/samples/4_annotated.md",
+      "format": "numbered-paragraphs",
+      "description": "AI-generated retranslation sample of Wisdom of Solomon chapter 1, annotated.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Tobit/the_weight_of_prayers.md",
+      "format": "prose-with-apparatus",
+      "description": "An original creative work responding to Tobit.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Tobit/the_weight_of_prayers.mp3",
+      "format": "mp3",
+      "description": "Audio narration of the_weight_of_prayers.md.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Tobit/raphael_revealed.png",
+      "format": "png",
+      "description": "An original illustration for Tobit.",
+      "rights": {
+        "status": "cc-by-4.0",
+        "basis": "owner-authored"
+      },
+      "scripture": false
+    },
+    {
+      "path": "books/Additions to Daniel/Three_Additions_to_Daniel_Daubney_Study.md",
+      "format": "prose-with-apparatus",
+      "description": "W. H. Daubney, The Three Additions to Daniel: A Study (1906). A scholarly study, not a translation.",
+      "rights": {
+        "status": "public-domain",
+        "basis": "age-us-uk"
+      },
+      "scripture": false
+    }
+  ]
+}

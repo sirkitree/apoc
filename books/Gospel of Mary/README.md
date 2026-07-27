@@ -112,9 +112,9 @@ The text has also influenced contemporary spiritual movements, interfaith dialog
 
 | File | Description |
 |------|-------------|
-| `Gospel_of_Mary_ECW.md` | English translation based on the Coptic text of Papyrus Berolinensis 8502, sourced from Early Christian Writings (earlychristianwritings.com). |
+| `Gospel_of_Mary_ECW.md` | English translation based on the Coptic text of Papyrus Berolinensis 8502, sourced from Early Christian Writings (earlychristianwritings.com). **Rights unresolved:** the file names no translator, and its wording matches the MacRae--Wilson--Parrott translation printed in *The Nag Hammadi Library in English*, which is under copyright. See [`NOTICE.md`](../../NOTICE.md). |
 | `Gospel_of_Mary_Mattison.md` | Public domain English translation by Mark M. Mattison, based on the Coptic text of Papyrus Berolinensis 8502,1. Includes section headings and translation notes. |
-| `Gospel_of_Mary_Jenott.pdf` | Scholarly translation by Lance Jenott (2018), based on the Coptic and Greek texts from the Brill Edition (BG 8502 and P.Ryl. 463) and P. J. Parson's edition of P.Oxy 3525. Includes introduction and textual signs. |
+| `Gospel_of_Mary_Jenott.pdf` | Scholarly translation by Lance Jenott (2018), based on the Coptic and Greek texts from the Brill Edition (BG 8502 and P.Ryl. 463) and P. J. Parson's edition of P.Oxy 3525. Includes introduction and textual signs. **Rights unresolved:** a translation this recent is under copyright unless the translator has released it. See [`NOTICE.md`](../../NOTICE.md). |
 | `Gospel_of_Mary_Interlinear.pdf` | Coptic-English interlinear edition by Mark M. Mattison (2013). Reproduces the text of the Berlin Codex 8502, page 7 line 1 through page 19 line 5, with Coptic and English presented side by side. |
 
 ---

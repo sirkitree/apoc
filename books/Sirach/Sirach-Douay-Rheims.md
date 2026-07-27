@@ -4901,7 +4901,7 @@ exceedingly.
 47:31. And they sought out all iniquities, till vengeance came upon
 them, and put an end to all their sins.
 
-Ecclesiasticus Chapte 48
+Ecclesiasticus Chapter 48
 
 The praise of Elias, of Eliseus, of Ezechias, and of Isaias.
 

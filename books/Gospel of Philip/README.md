@@ -132,5 +132,10 @@ The Gospel of Philip, along with the *Gospel of Mary* and the *Gospel of Thomas*
 
 | File | Description |
 |------|-------------|
-| `Gospel_of_Philip.md` | Full English translation by Wesley W. Isenberg, from *The Nag Hammadi Library*. The standard scholarly translation, formatted for reading. Source: gnosis.org |
+| `Gospel_of_Philip_Mattison.md` | Full English translation by Mark M. Mattison, from the Coptic of Nag Hammadi Codex II, 3. Explicitly dedicated to the public domain by the translator. Includes his section headings, page numbers of the codex, and notes on translation. Source: [gospels.net/philip](https://www.gospels.net/philip) |
 | `README.md` | This overview and study guide. |
+
+The Wesley W. Isenberg translation from *The Nag Hammadi Library* was previously
+included here. It is still under copyright (Brill / HarperCollins) and was
+removed; the Mattison translation above is the public domain replacement. See
+[`NOTICE.md`](../../NOTICE.md) in the repository root.

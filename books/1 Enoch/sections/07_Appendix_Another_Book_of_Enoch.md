@@ -1,0 +1,56 @@
+APPENDIX: ANOTHER BOOK OF ENOCH (1 ENOCH 108)
+
+Translated from the Ethiopic by R. H. Charles (1917, "The Book of Enoch",
+S.P.C.K., London). Public domain.
+
+Source: English Wikisource, "The Book of Enoch (Charles)"
+https://en.wikisource.org/wiki/The_Book_of_Enoch_(Charles)
+
+Charles's notation is preserved: [ ] marks an editorial deletion, < > an
+editorial addition, doubled brackets a reading restored from a secondary
+witness, and a dagger a corrupt reading. Where Charles printed parallel
+recensions side by side, the Ethiopic is given as the running text and the
+other witness follows in square brackets on an indented line. Verses are
+cited as chapter:verse; continuation lines of a verse are indented,
+preserving Charles's verse lineation in the poetic sections.
+
+VERSES ARE NOT ALWAYS IN NUMERICAL ORDER. Charles transposed verses he
+judged to be displaced in the Ethiopic, and this edition follows his
+arrangement rather than renumbering it. Chapters 60, 90 and 106 run out of
+sequence; 106, for instance, prints 106:17 between 106:14 and 106:15, and
+in 90 the doublets at 13-15 and 16-18 are interleaved. Do not assume a
+monotonic verse sequence when iterating.
+
+========================================================================
+
+CHAPTER 108 (CVIII)
+
+108:1 Another book which Enoch wrote for his son Methuselah and for those who will come after him, and keep the law in the last days.
+
+108:2 Ye who have done good shall wait for those days till an end is made of those who work evil, and an end of the might of the transgressors.
+
+108:3 And wait ye indeed till sin has passed away, for their names shall be blotted out of the book of life and out of the holy books, and their seed shall be destroyed for ever, and their spirits shall be slain, and they shall cry and make lamentation in a place that is a chaotic wilderness, and in the fire shall they burn; for there is no earth there.
+
+108:4 And I saw there something like an invisible cloud; for by reason of its depth I could not †look over†, and I saw a flame of fire blazing brightly, and things like shining mountains circling and sweeping to and fro.
+
+108:5 And I asked one of the holy angels who was with me and said unto him: ‘What is this shining thing? for it is not a heaven but only the flame of a blazing fire, and the voice of weeping and crying and lamentation and strong pain.’
+
+108:6 And he said unto me: ‘This place which thou seest—here are cast the spirits of sinners and blasphemers, and of those who work wickedness, and of those who pervert everything that the Lord hath spoken through the mouth of the prophets—(even) the things that shall be.
+
+108:7 For some of them are written and inscribed above in the heaven, in order that the angels may read them and know that which shall befall the sinners, and the spirits of the humble, and of those who have afflicted their bodies, and been recompensed by God; and of those who have been put to shame by wicked men:
+
+108:8 Who love God and loved neither gold nor silver nor any of the good things which are in the world, but gave over their bodies to torture.
+
+108:9 Who, since they came into being, longed not after earthly food, but regarded everything as a passing breath, and lived accordingly, and the Lord tried them much, and their spirits were found pure so that they should bless His name.
+
+108:10 And all the blessings destined for them I have recounted in the books. And He hath assigned them their recompense, because they have been found to be such as loved heaven more than their life in the world, and though they were trodden under foot of wicked men, and experienced abuse and reviling from them and were put to shame, yet they blessed Me.
+
+108:11 And now I will summon the spirits of the good who belong to the generation of light, and I will transform those who were born in darkness, who in the flesh were not recompensed with such honour as their faithfulness deserved.
+
+108:12 And I will bring forth in shining light those who have loved My holy name, and I will seat each on the throne of his honour.
+
+108:13 And they shall be resplendent for times without number; for righteousness is the judgement of God; for to the faithful He will give faithfulness in the habitation of upright paths.
+
+108:14 And they shall see those who were born in darkness led into darkness, while the righteous shall be resplendent.
+
+108:15 And the sinners shall cry aloud and see them resplendent, and they indeed will go where days and seasons are prescribed for them.’

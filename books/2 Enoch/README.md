@@ -126,7 +126,8 @@ Andrei Orlov and other scholars have drawn attention to striking parallels betwe
 
 | File | Description |
 |------|-------------|
-| `The_Second_Book_Of_Enoch.pdf` | PDF translation of 2 Enoch (The Book of the Secrets of Enoch) |
+| `The_Second_Book_of_Enoch_Morfill.md` | Full text, 68 chapters, in W. R. Morfill's translation from the Slavonic as printed in Rutherford H. Platt's *The Forgotten Books of Eden* (1926). Chapters are marked `CHAPTER n` and verses are one per paragraph, numbered `n`. Sourced from the proofread transcription on English Wikisource. |
+| `The_Second_Book_Of_Enoch.pdf` | PDF translation of 2 Enoch (The Book of the Secrets of Enoch). |
 
 ---
 
