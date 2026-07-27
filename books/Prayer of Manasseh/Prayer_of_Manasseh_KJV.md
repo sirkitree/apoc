@@ -1,6 +1,10 @@
 THE PRAYER OF MANASSEH
 King James Version with Apocrypha
 Source: eBible.org (King James Version + Apocrypha, public domain)
+
+One reading has been corrected against the printed King James text: at verse 13
+the eBible.org transcription reads "mine iniquites", a slip found nowhere else
+in that edition. It is given here as "mine iniquities".
 ============================================================
 
 1 O Lord, Almighty God of our fathers, Abraham, Isaac, and Jacob, and of their righteous seed;
@@ -27,7 +31,7 @@ Source: eBible.org (King James Version + Apocrypha, public domain)
 
 12 I have sinned, O Lord, I have sinned, and I acknowledge mine iniquities:
 
-13 wherefore, I humbly beseech thee, forgive me, O Lord, forgive me, and destroy me not with mine iniquites. Be not angry with me for ever, by reserving evil for me; neither condemn me to the lower parts of the earth. For thou art the God, even the God of them that repent;
+13 wherefore, I humbly beseech thee, forgive me, O Lord, forgive me, and destroy me not with mine iniquities. Be not angry with me for ever, by reserving evil for me; neither condemn me to the lower parts of the earth. For thou art the God, even the God of them that repent;
 
 14 and in me thou wilt shew all thy goodness: for thou wilt save me, that am unworthy, according to thy great mercy.
 

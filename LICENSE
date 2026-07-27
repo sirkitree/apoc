@@ -7,9 +7,16 @@ and raphael_revealed.png) -- is licensed under the Creative Commons Attribution
 4.0 International License, reproduced in full below.
 
 The translations of the ancient texts themselves are NOT covered by this license.
-They are third-party works in the public domain, and this license neither adds to
-nor subtracts from their status. NOTICE.md records, file by file, the specific
-basis on which each translation is believed to be in the public domain.
+They are third-party works, and this license neither adds to nor subtracts from
+their status. Most of them are in the public domain, but not all: one is under
+copyright and redistributed under a Creative Commons NonCommercial-NoDerivatives
+license, and the status of several more has not been established. Do not treat
+the collection as uniformly public domain.
+
+NOTICE.md records, file by file, the specific basis for each translation's
+status -- a quoted dedication, or a translator and publication date -- and lists
+the files whose rights are licensed or unresolved. Consult it before
+redistributing any part of this repository.
 
 -----------------------------------------------------------------------
 

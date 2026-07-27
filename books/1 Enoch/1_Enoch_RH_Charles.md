@@ -10,9 +10,16 @@ Charles's notation is preserved: [ ] marks an editorial deletion, < > an
 editorial addition, doubled brackets a reading restored from a secondary
 witness, and a dagger a corrupt reading. Where Charles printed parallel
 recensions side by side, the Ethiopic is given as the running text and the
-other witness follows in square brackets. Verses are cited as chapter:verse;
-continuation lines of a verse are indented, preserving Charles's verse
-lineation in the poetic sections.
+other witness follows in square brackets on an indented line. Verses are
+cited as chapter:verse; continuation lines of a verse are indented,
+preserving Charles's verse lineation in the poetic sections.
+
+VERSES ARE NOT ALWAYS IN NUMERICAL ORDER. Charles transposed verses he
+judged to be displaced in the Ethiopic, and this edition follows his
+arrangement rather than renumbering it. Chapters 60, 90 and 106 run out of
+sequence; 106, for instance, prints 106:17 between 106:14 and 106:15, and
+in 90 the doublets at 13-15 and 16-18 are interleaved. Do not assume a
+monotonic verse sequence when iterating.
 
 ========================================================================
 
@@ -2408,17 +2415,7 @@ CHAPTER 89 (LXXXIX)
 89:48 And that second ram arose and led the [little] sheep.
 
 89:49 And those sheep grew and multiplied; but all the dogs, and foxes, and wild boars feared and fled before it, and that ram butted and killed the wild beasts, and those wild beasts had no longer any power among the sheep and robbed them no more of ought. 48b. And that ram begat many sheep and fell asleep; and a little sheep became ram in its stead, and became prince and leader of those sheep.
-    |
-    Greek fragment from Vatican MS., published by Mai, Patrum Nova Bibliotheca, t. ii, deciphered by Gildemeister, in ZDMG, 1855, pp. 621, 622.
-    'Ἐκ τοῦ τοῦ 'Ἐνὼχ βιβλίου χρῆσις.
-    42 Καὶ οἱ κύνες ἤρξαντο κατεσθίειν τὰ πρόβατα καὶ οἱ ὔες καὶ οἱ ἀλώπεκες κατήσθιον αὐτά, μέχρι οὗ ἤγειρεν ὁ κύριος τῶν προβάτων κριὸν ἕνα ἐκ τῶν προβάτων.
-    43 Καὶ ὁ κριὸς οὗτος ἤρξατο κερατίζειν καὶ ἐπιδιώκειν ἐν τοῖς κέρασιν καὶ ἐνετίνασσεν εἰς τοὺς ἀλώπεκας καὶ μετ᾿ αὐτοὺς εἰς τοὺς ὔας καὶ ἀπώλεσεν ὔας πολλοὺς καὶ μετ᾿ αὐτοὺς … το τοὺς κύνας.
-    44 Καὶ τὰ πρόβατα ὧν οἱ ὀφθαλμοὶ ἠνοίγησαν ἐθεάσοντο τὸν κριὸν τὸν ἐν τοῖς προβάτοις, ἕως οὗ ἀφῆκεν τὴν ὁδὸν αὐτοῦ καὶ ἤρξατο πορεύεσθαι †ἀνοδία.
-    45 Καὶ ὁ κύριος τῶν προβάτων ἀπέστειλεν τὸν ἄρνα τοῦτον ἐπὶ ἄρνα ἕτερον τοῦ στῆσαι αὐτὸν εἰς κριὸν ἐν ἀρχῇ τῶν προβάτων ἁντὶ τοῦ κριοῦ τοῦ ἀφέντος τὴν ὁδὸν αὐτοῦ.
-    46 Kαὶ ἐπορεύθη πρὸς αὐτὸν καὶ ἐλάλησεν αὐτῷ σιγῇ κατὰ μόνας καὶ ἤγειρεν αὐτὸν εἰς κριὸν καὶ εἰς ἄρχοντα καὶ εἰς ἡγούμενον τῶν προβάτων καὶ οἱ κύνες ἐπὶ πᾶσι τούτοις ἔθλιβον τὰ πρόβατα.
-    47 [Ἑξῆς δὲ τούτοις γέγραπται ὅτι] ὁ κριὸς ὁ πρῶτος τὸν κριὸν τὸν δεύτερον ἐπεδίωκεν καὶ ἔφυγεν ἀπὸ προσώπου αὐτοῦ· εἶτ᾽ ἐθεώρουν, [φησίν], τὸν κριὸν τὸν πρῶτον ἕως οὗ ἔπεσεν ἔμπροσθεν τῶν κυνῶν.
-    48 Καὶ ὁ κριὺς ὁ δεύτερος ἀναπηδήσας ἀφηγήσατο τῶν προβάτων.
-    49 Καὶ τὰ πρόβατα ηὐξήθησαν καὶ ἐπληθύνθησαν καὶ πάντες οἱ κύνες καὶ οἱ ἀλώπεκες ἔψυγον ἀπ' αὐτοῦ καὶ ἐφοβοῦντο αὐτόν.
+    [Greek: Greek fragment from Vatican MS., published by Mai, Patrum Nova Bibliotheca, t. ii, deciphered by Gildemeister, in ZDMG, 1855, pp. 621, 622. 'Ἐκ τοῦ τοῦ 'Ἐνὼχ βιβλίου χρῆσις. 42 Καὶ οἱ κύνες ἤρξαντο κατεσθίειν τὰ πρόβατα καὶ οἱ ὔες καὶ οἱ ἀλώπεκες κατήσθιον αὐτά, μέχρι οὗ ἤγειρεν ὁ κύριος τῶν προβάτων κριὸν ἕνα ἐκ τῶν προβάτων. 43 Καὶ ὁ κριὸς οὗτος ἤρξατο κερατίζειν καὶ ἐπιδιώκειν ἐν τοῖς κέρασιν καὶ ἐνετίνασσεν εἰς τοὺς ἀλώπεκας καὶ μετ᾿ αὐτοὺς εἰς τοὺς ὔας καὶ ἀπώλεσεν ὔας πολλοὺς καὶ μετ᾿ αὐτοὺς … το τοὺς κύνας. 44 Καὶ τὰ πρόβατα ὧν οἱ ὀφθαλμοὶ ἠνοίγησαν ἐθεάσοντο τὸν κριὸν τὸν ἐν τοῖς προβάτοις, ἕως οὗ ἀφῆκεν τὴν ὁδὸν αὐτοῦ καὶ ἤρξατο πορεύεσθαι †ἀνοδία. 45 Καὶ ὁ κύριος τῶν προβάτων ἀπέστειλεν τὸν ἄρνα τοῦτον ἐπὶ ἄρνα ἕτερον τοῦ στῆσαι αὐτὸν εἰς κριὸν ἐν ἀρχῇ τῶν προβάτων ἁντὶ τοῦ κριοῦ τοῦ ἀφέντος τὴν ὁδὸν αὐτοῦ. 46 Kαὶ ἐπορεύθη πρὸς αὐτὸν καὶ ἐλάλησεν αὐτῷ σιγῇ κατὰ μόνας καὶ ἤγειρεν αὐτὸν εἰς κριὸν καὶ εἰς ἄρχοντα καὶ εἰς ἡγούμενον τῶν προβάτων καὶ οἱ κύνες ἐπὶ πᾶσι τούτοις ἔθλιβον τὰ πρόβατα. 47 [Ἑξῆς δὲ τούτοις γέγραπται ὅτι] ὁ κριὸς ὁ πρῶτος τὸν κριὸν τὸν δεύτερον ἐπεδίωκεν καὶ ἔφυγεν ἀπὸ προσώπου αὐτοῦ· εἶτ᾽ ἐθεώρουν, [φησίν], τὸν κριὸν τὸν πρῶτον ἕως οὗ ἔπεσεν ἔμπροσθεν τῶν κυνῶν. 48 Καὶ ὁ κριὺς ὁ δεύτερος ἀναπηδήσας ἀφηγήσατο τῶν προβάτων. 49 Καὶ τὰ πρόβατα ηὐξήθησαν καὶ ἐπληθύνθησαν καὶ πάντες οἱ κύνες καὶ οἱ ἀλώπεκες ἔψυγον ἀπ' αὐτοῦ καὶ ἐφοβοῦντο αὐτόν.]
 
 89:50 And that house became great and broad, and it was built for those sheep: 〈and〉 a tower lofty and great was built on the house for the Lord of the sheep, and that house was low, but the tower was elevated and lofty, and the Lord of the sheep stood on that tower and they offered a full table before Him.
 
@@ -2513,16 +2510,14 @@ CHAPTER 90 (XC)
 90:12 And those ravens fought and battled with it and sought to lay low its horn, but they had no power over it.
 
 90:13 And I saw till the †shepherds and† eagles and those vultures and kites came, and †they cried to the ravens† that they should break the horn of that ram, and they battled and fought with it, and it battled with them and cried that its help might come.
-    [variant recension:
 
-90:16 All the eagles and vultures and ravens and kites were gathered together, and there came with them all the sheep of the field, yea, they all came together, and helped each other to break that horn of the ram.]
+90:16 All the eagles and vultures and ravens and kites were gathered together, and there came with them all the sheep of the field, yea, they all came together, and helped each other to break that horn of the ram.
 
 90:19 And I saw till a great sword was given to the sheep, and the sheep proceeded against all the beasts of the field to slay them, and all the beasts and the birds of the heaven fled before their face.
 
 90:14 And I saw till that man, who wrote down the names of the shepherds [and] carried up into the presence of the Lord of the sheep [came and helped it and showed it everything: he had come down for the help of that ram].
 
 90:15 And I saw till the Lord of the sheep came unto them in wrath, and all who saw Him fled, and they all fell †into His shadow† from before His face.
-    |
 
 90:17 And I saw that man, who wrote the book according to the command of the Lord, till he opened that book concerning the destruction which those twelve last shepherds had wrought, and showed that they had destroyed much more than their predecessors, before the Lord of the sheep.
 

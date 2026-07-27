@@ -8,6 +8,7 @@
     "paths": "All paths are relative to the repository root and use forward slashes. Directory and file names are not derivable from the book name; always use the paths given here.",
     "primary": "A file marked \"primary\": true is the recommended machine-readable edition of that text. Where a book has several primary files (Additions to Daniel) they are separate compositions, not alternative editions of one.",
     "scripture": "A file marked \"scripture\": false is not a translation of the ancient text and must not be served as one. See nonScripture below for the full list.",
+    "verseOrder": "Every text file carries a verseOrder derived by reading the file. \"monotonic\": true means verse numbers ascend within each chapter. Where it is false, either outOfOrderChapters names the chapters that do not -- Charles transposed verses he judged displaced, and this collection follows his arrangement rather than renumbering it -- or \"scope\": \"whole file\" means the file has no chapter headings and its numbers do not form a single ascending run. Do not assume a monotonic sequence when iterating.",
     "rights": "Every file carries a rights status and a basis. \"public-domain\" is asserted per file, never in bulk. Files whose basis could not be established carry status \"unverified\"; one file is \"cc-by-nc-nd-4.0\" and is NOT public domain. See NOTICE.md for the full record."
   },
   "formats": {
@@ -47,10 +48,14 @@
     },
     "cv-paragraphs": {
       "media": "text/markdown",
-      "description": "Chapter headings as `CHAPTER <n>` (optionally followed by a roman numeral in parentheses), with the translator's own section headings on their own lines above them. Verses are blank-line-separated paragraphs opening `<chapter>:<verse> `. A verse may carry continuation lines indented four spaces, which preserve the translator's line layout in poetic passages.",
+      "description": "Chapter headings as `CHAPTER <n>` (optionally followed by a roman numeral in parentheses), with the translator's own section headings on their own lines above them. Verses are blank-line-separated paragraphs opening `<chapter>:<verse> `. A verse may carry continuation lines indented four spaces, which preserve the translator's line layout in poetic passages. A continuation line of the form `[<witness>: ...]` is apparatus -- a parallel recension in another language -- not part of the verse.",
       "chapterHeading": "^CHAPTER (\\d+)( \\([IVXLC]+\\))?$",
       "verse": "^(\\d+):(\\d+) (.*)$",
-      "continuation": "^    (.*)$"
+      "continuation": "^    (.*)$",
+      "apparatus": "^    \\[([^:]+): (.*)\\]$",
+      "caveats": [
+        "verses are not guaranteed to appear in numerical order; see verseOrder on each file"
+      ]
     },
     "numbered-paragraphs": {
       "media": "text/markdown",
@@ -122,7 +127,10 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Wisdom of Solomon/Wisdom_of_Solomon_KJV.pdf",
@@ -182,7 +190,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Chapter headings read `Ecclesiasticus Chapter <n>`."
+          "notes": "Chapter headings read `Ecclesiasticus Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Sirach/Sirach-WEB.pdf",
@@ -243,7 +254,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Chapter headings read `Tobias Chapter <n>`."
+          "notes": "Chapter headings read `Tobias Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Tobit/Tobit_CPDV_sacredbible.html",
@@ -352,7 +366,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Chapter headings read `Judith Chapter <n>`."
+          "notes": "Chapter headings read `Judith Chapter <n>`.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Judith/judith-kjv-ebible.pdf",
@@ -409,7 +426,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Includes the Letter of Jeremiah as chapter 6, following the Vulgate convention."
+          "notes": "Includes the Letter of Jeremiah as chapter 6, following the Vulgate convention.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Baruch/Baruch_KJV.pdf",
@@ -453,7 +473,10 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/1 Maccabees/1_Maccabees_Douay_Rheims.md",
@@ -469,7 +492,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapter headings read `1 Machabees Chapter <n>`."
+          "notes": "Chapter headings read `1 Machabees Chapter <n>`. Nine transcription defects in the Project Gutenberg text were corrected: `1:50.` in the middle of chapter 11 (a dropped digit, now `11:50.`), the misnumbered run `3:64, 3:66, 3:66, 3:67, 3:68` between 3:53 and 3:59 (now `3:54`-`3:58`), missing periods on the 1:45 and 4:26 markers, and seven verses that Gutenberg ran onto the end of the previous verse's line rather than starting a paragraph. No word of the text was changed.",
+          "verseOrder": {
+            "monotonic": true
+          }
         }
       ],
       "alsoKnownAs": [
@@ -499,7 +525,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Chapter headings read `2 Machabees Chapter <n>`."
+          "notes": "Chapter headings read `2 Machabees Chapter <n>`. Seven transcription defects in the Project Gutenberg text were corrected: duplicate markers at 7:6 and 10:26 (the first of each is 7:5 and 10:25), misplaced periods on the 1:31 and 2:6 markers, and five verses that Gutenberg ran onto the end of the previous verse's line rather than starting a paragraph. No word of the text was changed.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/2 Maccabees/2_Maccabees_KJV.pdf",
@@ -544,7 +573,11 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "The KJV follows the Vulgate numbering, chapters 10-16, so verse numbers run continuously rather than restarting per chapter."
+          "notes": "The KJV follows the Vulgate numbering, chapters 10-16. The file carries no chapter headings, and the verse numbers restart within each of those chapters, so read as one flat run they are not ascending. Verse 1 of the file is Esther 10:4.",
+          "verseOrder": {
+            "monotonic": false,
+            "scope": "whole file"
+          }
         },
         {
           "path": "books/Additions to Esther/Additions_to_Esther_WEB.pdf",
@@ -604,7 +637,10 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Additions to Daniel/Bel_and_the_Dragon_KJV.md",
@@ -620,7 +656,10 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Additions to Daniel/Prayer_of_Azariah_and_Song_of_Three_Holy_Children_KJV.md",
@@ -636,7 +675,10 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Additions to Daniel/Susanna_KJV.htm",
@@ -785,7 +827,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "9 chapters, 448 verses. Called 3 Esdras in the Vulgate and Esdras A in the Septuagint."
+          "notes": "9 chapters, 448 verses. Called 3 Esdras in the Vulgate and Esdras A in the Septuagint.",
+          "verseOrder": {
+            "monotonic": true
+          }
         }
       ],
       "alsoKnownAs": [
@@ -816,7 +861,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "16 chapters, 874 verses. Chapters 3-14 are the Jewish apocalypse known in scholarship as 4 Ezra; chapters 1-2 and 15-16 are later Christian additions. This 1611 text LACKS the passage at 7:36-105, which was not recovered until 1875, so its chapter 7 verse numbers diverge from modern critical editions after 7:35."
+          "notes": "16 chapters, 874 verses. Chapters 3-14 are the Jewish apocalypse known in scholarship as 4 Ezra; chapters 1-2 and 15-16 are later Christian additions. This 1611 text LACKS the passage at 7:36-105, which was not recovered until 1875, so its chapter 7 verse numbers diverge from modern critical editions after 7:35.",
+          "verseOrder": {
+            "monotonic": true
+          }
         }
       ],
       "alsoKnownAs": [
@@ -848,7 +896,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "A single chapter of 15 verses; the file has no chapter heading."
+          "notes": "A single chapter of 15 verses; the file has no chapter heading. One reading is corrected against the printed King James text: at verse 13 the eBible.org transcription reads 'mine iniquites', a slip found nowhere else in that edition, given here as 'mine iniquities'. The correction is recorded in the file header.",
+          "verseOrder": {
+            "monotonic": true
+          }
         }
       ],
       "alsoKnownAs": [
@@ -878,7 +929,15 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "All 108 chapters, 1,052 verses. Charles's editorial notation is preserved: [ ] editorial deletion, < > editorial addition, doubled brackets a reading restored from a secondary witness, dagger a corrupt reading. Where Charles printed parallel recensions side by side, the Ethiopic is the running text and the other witness follows in square brackets on an indented line. A small number of verse numbers that Charles set mid-clause are absorbed into the preceding verse."
+          "notes": "All 108 chapters, 1,052 verses. Charles's editorial notation is preserved: [ ] editorial deletion, < > editorial addition, doubled brackets a reading restored from a secondary witness, dagger a corrupt reading. Where Charles printed a named witness in another language alongside the Ethiopic, the Ethiopic is the running text and the other witness follows as an indented `[Greek: ...]` or `[Latin Fragment: ...]` line, which is apparatus and not verse text. Where he printed an unnamed parallel column -- the doublets at 90:13-15 and 90:16-18 -- both belong to the chapter and both appear as ordinary verses. A small number of verse numbers that Charles set mid-clause are absorbed into the preceding verse. VERSES ARE NOT ALWAYS IN NUMERICAL ORDER: chapters 60, 90 and 106 follow Charles's transposed arrangement.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "60",
+              "90",
+              "106"
+            ]
+          }
         },
         {
           "path": "books/1 Enoch/sections/01_Book_of_the_Watchers.md",
@@ -894,7 +953,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 1-36, extracted from 1_Enoch_RH_Charles.md."
+          "notes": "Chapters 1-36, extracted from 1_Enoch_RH_Charles.md.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/1 Enoch/sections/02_Book_of_Parables.md",
@@ -910,7 +972,13 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 37-71."
+          "notes": "Chapters 37-71.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "60"
+            ]
+          }
         },
         {
           "path": "books/1 Enoch/sections/03_Book_of_the_Heavenly_Luminaries.md",
@@ -926,7 +994,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 72-82."
+          "notes": "Chapters 72-82.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/1 Enoch/sections/04_Book_of_Dream_Visions.md",
@@ -942,7 +1013,13 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 83-90."
+          "notes": "Chapters 83-90.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "90"
+            ]
+          }
         },
         {
           "path": "books/1 Enoch/sections/05_Epistle_of_Enoch.md",
@@ -958,7 +1035,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 91-105."
+          "notes": "Chapters 91-105.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/1 Enoch/sections/06_Fragment_of_the_Book_of_Noah.md",
@@ -974,7 +1054,13 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapters 106-107."
+          "notes": "Chapters 106-107.",
+          "verseOrder": {
+            "monotonic": false,
+            "outOfOrderChapters": [
+              "106"
+            ]
+          }
         },
         {
           "path": "books/1 Enoch/sections/07_Appendix_Another_Book_of_Enoch.md",
@@ -990,7 +1076,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Chapter 108."
+          "notes": "Chapter 108.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/1 Enoch/1_Enoch_RH_Charles.pdf",
@@ -1052,7 +1141,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "68 chapters, 321 verses."
+          "notes": "68 chapters, 321 verses.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/2 Enoch/The_Second_Book_Of_Enoch.pdf",
@@ -1098,7 +1190,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "50 chapters, 1,306 verses. A PROLOGUE section precedes chapter 1. Each chapter opens with a line beginning `Argument: ` -- Charles's own prose summary of the chapter, not scripture. Verse divisions follow the transcription; one division it had lost, between 1:8 and 1:9, has been restored."
+          "notes": "50 chapters, 1,306 verses. A PROLOGUE section precedes chapter 1. Each chapter opens with a line beginning `Argument: ` -- Charles's own prose summary of the chapter, not scripture. Verse divisions follow the transcription; one division it had lost, between 1:8 and 1:9, has been restored.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Jubilees/Book_of_Jubilees.pdf",
@@ -1205,7 +1300,10 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Testament of Solomon/testament-of-solomon-conybeare.pdf",
@@ -1247,7 +1345,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "The file states 'This text is in the public domain.'"
+          "notes": "The file states 'This text is in the public domain.'",
+          "verseOrder": {
+            "monotonic": true
+          }
         }
       ],
       "alsoKnownAs": [
@@ -1338,7 +1439,10 @@
             "basis": "unverified"
           },
           "scripture": true,
-          "notes": "Probably under copyright. Same source volume as the Isenberg and Lambdin translations already removed from this repository. See NOTICE.md."
+          "notes": "Probably under copyright. Same source volume as the Isenberg and Lambdin translations already removed from this repository. See NOTICE.md.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Gospel of Mary/Gospel_of_Mary_Jenott.pdf",
@@ -1467,7 +1571,10 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "32 numbered paragraphs. The numbers are paragraph numbers of the New Advent edition, not the chapter numbers of the printed Ante-Nicene Fathers text, which divides the work differently."
+          "notes": "32 numbered paragraphs. The numbers are paragraph numbers of the New Advent edition, not the chapter numbers of the printed Ante-Nicene Fathers text, which divides the work differently.",
+          "verseOrder": {
+            "monotonic": true
+          }
         },
         {
           "path": "books/Acts of Paul and Thecla/Acts_of_Paul_and_Thecla_newadvent.html",
@@ -1542,7 +1649,11 @@
             "basis": "age-us-uk"
           },
           "scripture": true,
-          "notes": "Based on the Akhmim Greek fragment only, so much shorter than the James text."
+          "notes": "Based on the Akhmim Greek fragment only, so much shorter than the James text. The file holds two independent numbered runs: the translated text, then a set of five patristic testimonia which restart at 1. Numbering is therefore not ascending across the file as a whole.",
+          "verseOrder": {
+            "monotonic": false,
+            "scope": "whole file"
+          }
         },
         {
           "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James.html",

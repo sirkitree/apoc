@@ -185,7 +185,7 @@ The figure of Enoch persisted across cultures: in Jewish tradition as **Metatron
 
 | File | Description |
 |---|---|
-| `1_Enoch_RH_Charles.md` | The complete text, all 108 chapters, in R. H. Charles's 1917 translation from the Ethiopic. Sourced from the proofread transcription on English Wikisource. Verses are cited `chapter:verse`; Charles's editorial notation and his verse lineation in the poetic sections are preserved, and where he printed parallel recensions side by side the Ethiopic is the running text with the other witness following in square brackets. |
+| `1_Enoch_RH_Charles.md` | The complete text, all 108 chapters and 1,052 verses, in R. H. Charles's 1917 translation from the Ethiopic. Sourced from the proofread transcription on English Wikisource. Verses are cited `chapter:verse`; Charles's editorial notation and his verse lineation in the poetic sections are preserved. Where he set a named witness in another language beside the Ethiopic, the Ethiopic is the running text and the other witness follows as an indented `[Greek: …]` or `[Latin Fragment: …]` line — apparatus, not verse text. Where he set an unnamed parallel column, as with the doublets at 90:13–15 and 90:16–18, both belong to the chapter and both appear as ordinary verses. |
 | `sections/` | The same text split into the five constituent books plus the two appendices, for readers or tools that want one section at a time. See the table below. |
 | `1_Enoch_RH_Charles.pdf` | R. H. Charles's classic English translation of 1 Enoch, the foundational modern scholarly edition. |
 | `Book_of_Enoch.pdf` | A PDF edition of the Book of Enoch. |
@@ -203,6 +203,10 @@ The figure of Enoch persisted across cultures: in Jewish tradition as **Metatron
 | `05_Epistle_of_Enoch.md` | 91--105 | The Apocalypse of Weeks and a sustained series of woes against the rich and the oppressors. |
 | `06_Fragment_of_the_Book_of_Noah.md` | 106--107 | The birth of Noah, told as a marvel. |
 | `07_Appendix_Another_Book_of_Enoch.md` | 108 | A short closing exhortation, "another book which Enoch wrote." |
+
+### A note on verse order
+
+Verses in these files are **not always in numerical order**. Charles transposed verses he judged to be displaced in the Ethiopic, and this edition follows his arrangement rather than renumbering it. Chapters 60, 90 and 106 run out of sequence — 106, for instance, prints 106:17 between 106:14 and 106:15. Anything iterating over these files should read verse numbers rather than assume them; `books.json` records the affected chapters per file under `verseOrder`.
 
 The markdown edition previously held here, `All_Books_of_Enoch.md`, was an unproofread OCR dump of an Internet Archive scan -- library circulation stamps, page furniture and broken characters interleaved with the text -- and it ran 1 Enoch, 2 Enoch and 3 Enoch together in a single file. It has been replaced by the files above. 2 Enoch now has its own clean markdown edition in [`books/2 Enoch/`](../2%20Enoch/). The old file remains in the repository's git history.
 

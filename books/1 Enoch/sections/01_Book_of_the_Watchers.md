@@ -10,9 +10,16 @@ Charles's notation is preserved: [ ] marks an editorial deletion, < > an
 editorial addition, doubled brackets a reading restored from a secondary
 witness, and a dagger a corrupt reading. Where Charles printed parallel
 recensions side by side, the Ethiopic is given as the running text and the
-other witness follows in square brackets. Verses are cited as chapter:verse;
-continuation lines of a verse are indented, preserving Charles's verse
-lineation in the poetic sections.
+other witness follows in square brackets on an indented line. Verses are
+cited as chapter:verse; continuation lines of a verse are indented,
+preserving Charles's verse lineation in the poetic sections.
+
+VERSES ARE NOT ALWAYS IN NUMERICAL ORDER. Charles transposed verses he
+judged to be displaced in the Ethiopic, and this edition follows his
+arrangement rather than renumbering it. Chapters 60, 90 and 106 run out of
+sequence; 106, for instance, prints 106:17 between 106:14 and 106:15, and
+in 90 the doublets at 13-15 and 16-18 are interleaved. Do not assume a
+monotonic verse sequence when iterating.
 
 ========================================================================
 
