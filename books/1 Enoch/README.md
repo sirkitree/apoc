@@ -185,9 +185,26 @@ The figure of Enoch persisted across cultures: in Jewish tradition as **Metatron
 
 | File | Description |
 |---|---|
-| `1_Enoch_RH_Charles.pdf` | R.H. Charles's classic English translation of 1 Enoch, the foundational modern scholarly edition |
-| `All_Books_of_Enoch.md` | A markdown compilation of all the Books of Enoch (including 1 Enoch, 2 Enoch, and 3 Enoch) |
-| `Book_of_Enoch.pdf` | A PDF edition of the Book of Enoch |
+| `1_Enoch_RH_Charles.md` | The complete text, all 108 chapters, in R. H. Charles's 1917 translation from the Ethiopic. Sourced from the proofread transcription on English Wikisource. Verses are cited `chapter:verse`; Charles's editorial notation and his verse lineation in the poetic sections are preserved, and where he printed parallel recensions side by side the Ethiopic is the running text with the other witness following in square brackets. |
+| `sections/` | The same text split into the five constituent books plus the two appendices, for readers or tools that want one section at a time. See the table below. |
+| `1_Enoch_RH_Charles.pdf` | R. H. Charles's classic English translation of 1 Enoch, the foundational modern scholarly edition. |
+| `Book_of_Enoch.pdf` | A PDF edition of the Book of Enoch. |
+
+### The `sections/` directory
+
+1 Enoch is a compilation rather than a single composition, and its five parts were written at different times over roughly three centuries. Each file below carries the same header and notation as the complete text.
+
+| File | Chapters | Content |
+|------|----------|---------|
+| `01_Book_of_the_Watchers.md` | 1--36 | The fall of the angels, the Nephilim, Enoch's intercession, and his journeys through the earth and Sheol. The oldest section, c. 3rd century BCE. |
+| `02_Book_of_Parables.md` | 37--71 | The three Parables or Similitudes; the Son of Man, the Elect One, and the judgement of the kings and the mighty. The latest section, and the one absent from Qumran. |
+| `03_Book_of_the_Heavenly_Luminaries.md` | 72--82 | The Astronomical Book: the courses of the sun and moon, the gates and winds, and the 364-day solar calendar. |
+| `04_Book_of_Dream_Visions.md` | 83--90 | Two visions, including the Animal Apocalypse retelling the history of Israel with the nations as beasts. |
+| `05_Epistle_of_Enoch.md` | 91--105 | The Apocalypse of Weeks and a sustained series of woes against the rich and the oppressors. |
+| `06_Fragment_of_the_Book_of_Noah.md` | 106--107 | The birth of Noah, told as a marvel. |
+| `07_Appendix_Another_Book_of_Enoch.md` | 108 | A short closing exhortation, "another book which Enoch wrote." |
+
+The markdown edition previously held here, `All_Books_of_Enoch.md`, was an unproofread OCR dump of an Internet Archive scan -- library circulation stamps, page furniture and broken characters interleaved with the text -- and it ran 1 Enoch, 2 Enoch and 3 Enoch together in a single file. It has been replaced by the files above. 2 Enoch now has its own clean markdown edition in [`books/2 Enoch/`](../2%20Enoch/). The old file remains in the repository's git history.
 
 ---
 

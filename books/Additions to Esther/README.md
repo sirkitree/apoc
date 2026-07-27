@@ -174,4 +174,4 @@ Jerome's decision to separate the additions from the body of the text and append
 |------|-------------|
 | `Additions_to_Esther_KJV.md` | The Additions to Esther from the King James Version Apocrypha, in Markdown format. The KJV follows the Vulgate numbering (chapters 10-16). |
 | `Additions_to_Esther_WEB.pdf` | The Additions to Esther from the World English Bible (WEB), in PDF format. |
-| `Additions_to_Esther_Wycliffe.pdf` | The Additions to Esther from the Wycliffe Bible, in PDF format. One of the earliest English translations, based on the Latin Vulgate. |
+| `Additions_to_Esther_Wycliffe.pdf` | The Additions to Esther from Wycliffe's Bible with Modern Spelling, in PDF format. The Wycliffe Bible was one of the earliest English translations, made from the Latin Vulgate. **This modernised edition is not public domain:** it is Copyright © 2001--2015 Terence P. Noble, licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0. It may be redistributed with attribution, but not used commercially or altered. See [`NOTICE.md`](../../NOTICE.md). |

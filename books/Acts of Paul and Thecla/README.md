@@ -146,9 +146,11 @@ Modern scholars have made the *APTh* a key text in the study of gender and early
 
 | File | Description |
 |------|-------------|
-| `Acts_of_Paul_and_Thecla_newadvent.html` | Translation from New Advent (Church Fathers collection), based on the Ante-Nicene Fathers edition |
-| `Acts_of_Paul_and_Thecla_sacred-texts.html` | Translation from Sacred Texts archive |
-| `The Acts of Paul and Thecla.pdf` | PDF edition of the text |
+| `Acts_of_Paul_and_Thecla_ANF.md` | Full text in Alexander Walker's translation from the *Ante-Nicene Fathers*, vol. 8 (1886), converted from the HTML edition below. Paragraphs are numbered so that passages can be cited; New Advent's own scripture cross-reference links have been stripped, since they are that site's apparatus and not part of the translation. |
+| `Acts_of_Paul_and_Thecla_newadvent.html` | Translation from New Advent (Church Fathers collection), based on the Ante-Nicene Fathers edition. |
+| `The Acts of Paul and Thecla.pdf` | PDF edition of the text. |
+
+`Acts_of_Paul_and_Thecla_sacred-texts.html` previously sat in this directory but contained no text: the saved page was a Cloudflare "Enable JavaScript and cookies to continue" interstitial rather than the translation. It has been removed.
 
 ---
 

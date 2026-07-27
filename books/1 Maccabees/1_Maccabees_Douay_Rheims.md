@@ -326,7 +326,7 @@ death:
 1:67. And there was very great wrath upon the people.
 
 
-1 Machabees Chapter 2.
+1 Machabees Chapter 2
 
 The zeal and success of Mathathias. His exhortation to his sons at his
 death.

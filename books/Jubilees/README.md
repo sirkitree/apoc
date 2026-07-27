@@ -108,5 +108,7 @@ Jubilees is indispensable for understanding the diversity of Second Temple Jewis
 
 | File | Description |
 |------|-------------|
-| `Book_of_Jubilees_RHCharles.md` | Full text of the Book of Jubilees in the R.H. Charles English translation (originally published 1902, from the Ethiopic). Charles was an Irish biblical scholar (1855-1931) whose translations of pseudepigraphal texts remain widely used. This is a Markdown-formatted edition suitable for reading and text search. |
+| `Book_of_Jubilees_RH_Charles.md` | Full text, 50 chapters and 1,306 verses, in R. H. Charles's English translation from the Ethiopic as printed in *The Apocrypha and Pseudepigrapha of the Old Testament* (Oxford: Clarendon Press, 1913). Charles was an Irish biblical scholar (1855--1931) whose translations of the pseudepigrapha remain in wide use. Each chapter opens with Charles's own argument -- his prose summary of what the chapter contains -- followed by the numbered verses, cited `chapter:verse`. |
 | `Book_of_Jubilees.pdf` | PDF edition of the Book of Jubilees, preserving scholarly formatting from the print source. |
+
+The markdown edition previously held here, `Book_of_Jubilees_RHCharles.md`, was an unproofread OCR dump of an Internet Archive scan: it opened with library circulation stamps ("PROPERTY OF: DAVID O. McKAY LIBRARY", "DATE DUE") rather than text, and page furniture ran through the scripture throughout. It has been replaced by the file above and remains in the repository's git history.
