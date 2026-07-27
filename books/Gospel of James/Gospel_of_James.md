@@ -14,7 +14,7 @@ The Birth of Mary the Holy
 Mother of God,
 and Very Glorious Mother of Jesus Christ 
 
-IN THE RECORDS OF THE TWELVE TRIBES OF ISRAEL was Joachim, a man rich 
+1. IN THE RECORDS OF THE TWELVE TRIBES OF ISRAEL was Joachim, a man rich 
 exceedingly; and he brought his offerings double, saying: There shall be of my 
 superabundance to all the people, and there shall be the offering for my 
 forgiveness to the Lord for a propitiation for me. For the great day of the Lord 

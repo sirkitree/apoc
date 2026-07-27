@@ -187,7 +187,7 @@ own, so that they leave them, and go off by [21] night and day to others
 that belong to other men; with the result that they commit sin, and fall
 into murderous deeds."
 
-24. And I adjured him by the name of the Lord Sabaôth, saying: "Fear God,
+24. And I adjured him by the name of the Lord SabaÃ´th, saying: "Fear God,
 Asmodeus, and tell me by what angel thou art frustrated." But he said: "By
 Raphael, the archangel that stands before the throne of God. But the liver
 and gall of a fish put me to flight, when smoked over ashes of the
@@ -241,7 +241,7 @@ command, and will tell thee openly."
 answered: "By the holy and precious name of the Almighty God, called by the
 Hebrews by a row of numbers, of which the sum is 644, and among the Greeks
 it is Emmanuel [1]. And if one of the Romans adjure me by the great name of
-the power Eleéth, I disappear at once."
+the power EleÃ©th, I disappear at once."
 
      [1. The text must be faulty, for the word Emmanuel is the Hebrew.
      The sum 644 is got by adding together the Greek numbers.]
@@ -374,7 +374,7 @@ I have an angel that frustrates me, the great Balthial."
 
 39. Likewise also the fifth said: "I am Power. By power I raise up tyrants
 and tear down kings. To all rebels I furnish power. I have an angel that
-frustrates me, Asteraôth."
+frustrates me, AsteraÃ´th."
 
 40. Likewise also the sixth said: "I am Error [1], O King Solomon. And I
 will make thee to err, as I have before made thee to err, when I caused thee
@@ -561,7 +561,7 @@ subject."
      [1. Tribolaios. The tribolos was a three-spiked instrument, thrown
      on the ground to wound horses' feet.
 
-     2. bubá, an unknown word.
+     2. bubÃ¡, an unknown word.
 
      3. a word of doubtful sense.
 
@@ -617,14 +617,14 @@ the ruin of their minds, and paining of their bodies."
 
      2. stamatihu, an unknown verb.
 
-     3. xalepón.]
+     3. xalepÃ³n.]
 
 59. When I Solomon heard this, I marvelled at her appearance, for I beheld
 all her body to be in darkness. But her glance was altogether bright and
 greeny, and her hair was tossed wildly like a dragon's; and the whole of her
 limbs were invisible. And her voice was very clear as it came to me. And I
 cunningly said: "Tell me by what angel thou art frustrated, O evil spirit?"
-By she answered me: "By the angel of God called Afarôt, which is interpreted
+By she answered me: "By the angel of God called AfarÃ´t, which is interpreted
 Raphael, by whom I am frustrated now and for all time. His name, if any man
 know it, and write the same on a woman in childbirth, then I shall not be
 able to enter her. Of this name the number is 640 [1]." And I Solomon having
@@ -661,9 +661,9 @@ disturbed by thee will speak the whole truth. But those composed of fire [2]
 will cause to be burned up by fire the material of the logs which is to be
 collected by them for the building in the Temple."
 
-     [1. pterodrákun, a word not in the lexicons.
+     [1. pterodrÃ¡kun, a word not in the lexicons.
 
-     2. Tà dè dià pyrós.]
+     2. TÃ  dÃ¨ diÃ  pyrÃ³s.]
 
 62. And as the demon said this, I saw the spirit going forth from his mouth,
 and it consumed the wood of the frankincense-tree, and burned up all the
@@ -680,7 +680,7 @@ praised God, and commanded another demon to come before me.
 64. And there came before my face another spirit, as it were a woman in the
 form she had. But on her shoulders she had two other heads with hands. And I
 asked her, and said: "Tell me, who art thou?" And she said to me: "I am
-Enêpsigos, who also have a myriad names." And I said her: "By what angel art
+EnÃªpsigos, who also have a myriad names." And I said her: "By what angel art
 thou frustrated?" But she said to me: "What seekest, what askest thou? I
 undergo changes, like the goddess I am called. And I change again, and pass
 into possession of another shape. And be not [32] desirous therefore to know
@@ -694,12 +694,12 @@ become such as thou seest me; but I am frustrated by the angel Rathanael,
 who sits in the third heaven. This then is why I speak to thee. Yonder
 temple cannot contain me."
 
-     [1. mageyoméne.
+     [1. mageyomÃ©ne.
 
      2. Perhaps "the place or size of the heavenly body."]
 
 65. I therefore Solomon prayed to my God, and I invoked the angel of whom
-Enépsigos spoke to me, and used my seal. And I sealed her with a triple
+EnÃ©psigos spoke to me, and used my seal. And I sealed her with a triple
 chain, and (placed) beneath her the fastening of the chain. I used the seal
 of God, and the spirit prophesied to me, saying: "This is what thou, King
 Solomon, doest to us. But after a time thy kingdom shall be broken, and
@@ -774,7 +774,7 @@ water."
      neurospastos dicitur." The human form revealed itself in the
      footstep, which the leaf resembled.
 
-     2. basaníxeis. Cp. Matt. viii. 6, 29; xiv. 24; Mark v. 7.]
+     2. basanÃ­xeis. Cp. Matt. viii. 6, 29; xiv. 24; Mark v. 7.]
 
 69. And I said to him: "Tell me by what angel thou art frustrated." [34] And
 he answered: "By Iameth." And I glorified God. I commanded the spirit to be
@@ -839,7 +839,7 @@ imprison Ruax,' and at once I retreat."
 subject to my hour to feel the pain of migraine. If only I hear the words,
 'Gabriel, imprison Barsafael,' at once I retreat."
 
-75. The third said: "I am called Arôtosael. I do harm to eyes, and
+75. The third said: "I am called ArÃ´tosael. I do harm to eyes, and
 grievously injure them. Only let me hear the words, 'Uriel, imprison
 Aratosael' (sic), at once I retreat . . . . .[1]"
 
@@ -848,52 +848,52 @@ Aratosael' (sic), at once I retreat . . . . .[1]"
 76. The fifth said: "I am called Iudal, and I bring about a block in the
 ears and deafness of hearing. If I hear, 'Uruel Iudal,' I at once retreat."
 
-77. The sixth said: "I am called Sphendonaêl. I cause tumours of the parotid
+77. The sixth said: "I am called SphendonaÃªl. I cause tumours of the parotid
 gland, and inflammations of the tonsils, and tetanic recurvation [1]. If I
-hear, 'Sabrael, imprison Sphendonaêl,' at once I retreat.''
+hear, 'Sabrael, imprison SphendonaÃªl,' at once I retreat.''
 
      [1. The Greek medical terms which stand in the Greek text are
      found in Hippocrates, Galen, and Cuel. Aurel.]
 
-78. And the Seventh said: "I am called Sphandôr, and I weaken the strength
+78. And the Seventh said: "I am called SphandÃ´r, and I weaken the strength
 of the shoulders, and cause them to tremble; and I paralyze the nerves of
 the hands, and I break and bruise the bones of the neck. And I, I suck out
-the marrow. But if I hear the words, 'Araêl, imprison Sphandôr,' I at once
+the marrow. But if I hear the words, 'AraÃªl, imprison SphandÃ´r,' I at once
 retreat."
 
 79. And the eight said: "I am called Belbel. I distort the hearts and minds
-of men. If I hear the words, 'Araêl, imprison Belbel,' I at once retreat."
+of men. If I hear the words, 'AraÃªl, imprison Belbel,' I at once retreat."
 
-80. And the ninth said: "I am called Kurtaêl. I send colics in the bowels. I
-induce pains. If I hear the words, 'Iaôth, imprison Kurtaêl,' I at once
+80. And the ninth said: "I am called KurtaÃªl. I send colics in the bowels. I
+induce pains. If I hear the words, 'IaÃ´th, imprison KurtaÃªl,' I at once
 retreat."
 
 81. The tenth said: "I am called Metathiax. I cause the reins to ache. If I
-hear the words, 'Adônaêl, imprison Metathiax,' I at once retreat."
+hear the words, 'AdÃ´naÃªl, imprison Metathiax,' I at once retreat."
 
-82. The eleventh said: "I am called Katanikotaêl. I create strife [36] and
+82. The eleventh said: "I am called KatanikotaÃªl. I create strife [36] and
 wrongs in men's homes, and send on them hard temper. If any one would be at
 peace in his home, let him write on seven leaves of laurel the name of the
-angel that frustrates me, along with these names: Iae, Ieô, sons of Sabaôth,
-in the name of the great God let him shut up Katanikotaêl. Then let him wash
+angel that frustrates me, along with these names: Iae, IeÃ´, sons of SabaÃ´th,
+in the name of the great God let him shut up KatanikotaÃªl. Then let him wash
 the laurel-leaves in water, and sprinkle his house with the water, from
 within to the outside. And at once I retreat."
 
-83. The twelfth said: "I am called Saphathoraél, and I inspire partisanship
+83. The twelfth said: "I am called SaphathoraÃ©l, and I inspire partisanship
 in men, and delight in causing them to stumble. If any one will write on
-paper these names of angels, Iacô, Iealô, Iôelet, Sabaôth, Ithoth, Bae, and
+paper these names of angels, IacÃ´, IealÃ´, IÃ´elet, SabaÃ´th, Ithoth, Bae, and
 having folded it up, wear it round his neck or against his ear, I at once
 retreat and dissipate the drunken fit."
 
-84. The thirteenth said: "I am called Bobêl (sic), and I cause nervous
-illness by my assaults. If I hear the name of the great 'Adonaêl, imprison
-Bothothêl,' I at once retreat."
+84. The thirteenth said: "I am called BobÃªl (sic), and I cause nervous
+illness by my assaults. If I hear the name of the great 'AdonaÃªl, imprison
+BothothÃªl,' I at once retreat."
 
-85. The fourteenth said: "I am called Kumeatêl, and I inflict shivering fits
-and torpor. If only I hear the words: 'Zôrôêl, imprison Kumentaêl,' I at
+85. The fourteenth said: "I am called KumeatÃªl, and I inflict shivering fits
+and torpor. If only I hear the words: 'ZÃ´rÃ´Ãªl, imprison KumentaÃªl,' I at
 once retreat."
 
-86. The fifteenth said: "I am called Roêlêd. I cause cold and frost and pain
+86. The fifteenth said: "I am called RoÃªlÃªd. I cause cold and frost and pain
 in the stomach. Let me only hear the words: 'Iax, bide not, be not warmed,
 for Solomon is fairer than eleven fathers,' I at [once] retreat."
 
@@ -909,13 +909,13 @@ retreat."
      accessionem, vel plura illini fronti." The Testament evidently
      belongs to Pliny's age.]
 
-88. The seventeenth said: "I am called Ieropaêl. On the stomach of men I
+88. The seventeenth said: "I am called IeropaÃªl. On the stomach of men I
 sit, and cause convulsions in the bath and in the road; and wherever I be
 found, or find a man, I throw him down. But if any one will say to the
 afflicted into their ear these names, three times over, into the right ear:
-'Iudarizê, Sabunê, Denôê,' I at once retreat."
+'IudarizÃª, SabunÃª, DenÃ´Ãª,' I at once retreat."
 
-89. The eighteenth said: "I am called Buldumêch. I separate wife from
+89. The eighteenth said: "I am called BuldumÃªch. I separate wife from
 husband and bring about a grudge between them. If any one write down the
 names of thy sires, Solomon, on paper and place it in the ante-chamber of
 his house, I retreat thence. And the legend written shall be as follows:
@@ -923,28 +923,28 @@ his house, I retreat thence. And the legend written shall be as follows:
 -- retire from this house in peace.' And I at once retire."
 [37]
 
-90. The nineteenth said: "I am called Naôth, and I take my seat on the knees
-of men. If any one write on paper: 'Phnunoboêol, depart Nathath, and touch
+90. The nineteenth said: "I am called NaÃ´th, and I take my seat on the knees
+of men. If any one write on paper: 'PhnunoboÃªol, depart Nathath, and touch
 thou not the neck,' I at once retreat."
 
-91. The twentieth said: "I am called Marderô. I send on men incurable fever.
-If any one write on the leaf of a book: 'Sphênêr, Rafael, retire, drag me
+91. The twentieth said: "I am called MarderÃ´. I send on men incurable fever.
+If any one write on the leaf of a book: 'SphÃªnÃªr, Rafael, retire, drag me
 not about, flay me not,' and tie it round his neck, I at once retreat."
 
 92. The twenty-first said: "I am called Alath, and I cause coughing and
-hard-breathing in children. If any one write on paper: 'Rorêx, do thou
+hard-breathing in children. If any one write on paper: 'RorÃªx, do thou
 pursue Alath,' and fasten it round his neck, I at once retire... [1]"
 
      [1. There must here be a lacuna in the text.]
 
 93. The twenty-third said: "I am called Nefthada. I cause the reins to ache,
 and I bring about dysury. If any one write on a plate of tin the words:
-'Iathôth, Uruêl, Nephthada,' and fasten it round the loins, I at once
+'IathÃ´th, UruÃªl, Nephthada,' and fasten it round the loins, I at once
 retreat."
 
 94. The twenty-fourth said: "I am called Akton. I cause ribs and lumbic
 muscles to ache. If one engrave on copper material, taken from a ship which
-has missed its anchorage, this: 'Marmaraôth, Sabaôth, pursue Akton,' and
+has missed its anchorage, this: 'MarmaraÃ´th, SabaÃ´th, pursue Akton,' and
 fasten it round the loin, I at once retreat."
 
 95. The twenty-fifth said: "I am called Anatreth, and I rend burnings and
@@ -953,24 +953,24 @@ retreat."
 
 96. The twenty-sixth said: "I am called Enenuth. I steal away men's minds,
 and change their hearts, and make a man toothless (?). If one write:
-'Allazoôl, pursue Enenuth,' and tie the paper round him, I at once retreat."
+'AllazoÃ´l, pursue Enenuth,' and tie the paper round him, I at once retreat."
 
-97. The twenty-seventh said: "I am called Phêth. I make men consumptive and
+97. The twenty-seventh said: "I am called PhÃªth. I make men consumptive and
 cause hemorrhagia. ,If one exorcise me in wine, sweet-smelling and unmixed
 by the eleventh aeon [1], and say: 'I exorcise thee by the eleventh aeon to
-stop, I demand, Phêth (Axiôphêth),' then give it to the patient to drink,
+stop, I demand, PhÃªth (AxiÃ´phÃªth),' then give it to the patient to drink,
 and I at once retreat."
 
      [1. A Gnostic reference. Just above "eleven fathers" were
      mentioned.]
 
 98. The twenty-eighth said: "I am called Harpax, and I send sleeplessness on
-men. If one write 'Kokphnêdismos,' and bind it round the temples, I at once
+men. If one write 'KokphnÃªdismos,' and bind it round the temples, I at once
 retire."
 
-99. The twenty-ninth said: "I am called Anostêr. I engender uterine mania
+99. The twenty-ninth said: "I am called AnostÃªr. I engender uterine mania
 and pains in the bladder. If one powder into pure oil three seeds of laurel
-and smear it on, saying: 'I exorcise thee, Anostêr. Stop by Marmaraô,' at
+and smear it on, saying: 'I exorcise thee, AnostÃªr. Stop by MarmaraÃ´,' at
 once I retreat."
 
 100. The thirtieth said: "I am called Alleborith. If in eating [38] fish one
@@ -982,14 +982,14 @@ disease. If you throw salt, rubbed in the hand, into oil and smear it on the
 patient, saying: 'Seraphim, Cherubim, help me!' I at once retire."
 
 102. The thirty-second said: "I am called Ichthion. I paralyze muscles and
-contuse them. If I hear 'Adonaêth, help!' I at once retire."
+contuse them. If I hear 'AdonaÃªth, help!' I at once retire."
 
-103. The thirty-third said: "I am called Agchoniôn. I lie among
+103. The thirty-third said: "I am called AgchoniÃ´n. I lie among
 swaddling-clothes and in the precipice. And if any one write on fig-leaves
 'Lycurgos,' taking away one letter at a time, and write it, reversing the
 letters, I retire at once. 'Lycurgos, ycurgos, kurgos, yrgos, gos, os [1].'"
 
-     [1. botrydón, for which Bornemann conjectures boystrofydón. There
+     [1. botrydÃ³n, for which Bornemann conjectures boystrofydÃ³n. There
      is a parallel in a magic papyrus edited by Dieterich (Abraxas, p.
      185).]
 
@@ -1001,7 +1001,7 @@ man. Therefore, the eye much-suffering, if it be drawn. frustrates me."
 
 106. The thirty-sixth said: "I am called Bianakith. I have a grudge against
 the body. I lay waste houses, I cause flesh to decay, and all else that is
-similar. If a man write on the front-door of his house: 'Mêltô, Ardu,
+similar. If a man write on the front-door of his house: 'MÃªltÃ´, Ardu,
 Anaath,' I flee from that place."
 
 107. And I Solomon, when I heard this, glorified the God of heaven and
@@ -1114,7 +1114,7 @@ saw the bases of the pillars of the Temple of the Lord. All were of one gold
 ... [2] apart from the demons whom I condemned to labour. And there was
 peace in the circle of my kingdom and over all the earth.
 
-     [1. A shekel. Philo has the form síklos, i. 468. síglos is the
+     [1. A shekel. Philo has the form sÃ­klos, i. 468. sÃ­glos is the
      usual spelling in the LXX.
 
      2. There seems to be here a lacuna in the MS.]
@@ -1180,7 +1180,7 @@ on the ground, and the finger-ring on the mouth of the flask. And the demon
 blew through the middle of the finger-ring into the mouth of the flask, and
 going in blew out the flask. But the man promptly stood up to it and drew
 tight with his hand the mouth of the flask, in the name of the Lord God of
-Sabaôth. And the demon remained within the flask. And after that the youth
+SabaÃ´th. And the demon remained within the flask. And after that the youth
 remained in that land three days to make trial. And the spirit no longer
 blew against that city. And all the Arabs knew that he had safely shut in
 the spirit.
@@ -1252,7 +1252,7 @@ went in before Pharaoh, king of Egypt, and I hardened his heart. I am he
 whom Iannes and Iambres invoked homing [1] with Moses in Egypt. I am he who
 fought against Moses [2] with wonders with signs."
 
-     [1. oíkoyxúmenoi in the MS., a vox nihili. If we had the apocryph
+     [1. oÃ­koyxÃºmenoi in the MS., a vox nihili. If we had the apocryph
      of Iannes and Iambres we might understand the reference.
 
      2. 2 Tim. iii. 8.]
@@ -1300,7 +1300,7 @@ much?" But they said: ". . . . . [2] by our fathers."
 
      [1. Song of Sol. vi. 12.
 
-     2. utheìs (sic) stands in the MS.; perhaps taîs theaîs should be
+     2. utheÃ¬s (sic) stands in the MS.; perhaps taÃ®s theaÃ®s should be
      read.]
 
 129. And when I answered that I would on no account worship strange gods,

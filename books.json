@@ -8,8 +8,10 @@
     "paths": "All paths are relative to the repository root and use forward slashes. Directory and file names are not derivable from the book name; always use the paths given here.",
     "primary": "A file marked \"primary\": true is the recommended machine-readable edition of that text. Where a book has several primary files (Additions to Daniel) they are separate compositions, not alternative editions of one.",
     "scripture": "A file marked \"scripture\": false is not a translation of the ancient text and must not be served as one. See nonScripture below for the full list.",
-    "verseOrder": "Every text file carries a verseOrder derived by reading the file. \"monotonic\": true means verse numbers ascend within each chapter. Where it is false, either outOfOrderChapters names the chapters that do not -- Charles transposed verses he judged displaced, and this collection follows his arrangement rather than renumbering it -- or \"scope\": \"whole file\" means the file has no chapter headings and its numbers do not form a single ascending run. Do not assume a monotonic sequence when iterating.",
-    "rights": "Every file carries a rights status and a basis. \"public-domain\" is asserted per file, never in bulk. Files whose basis could not be established carry status \"unverified\"; one file is \"cc-by-nc-nd-4.0\" and is NOT public domain. See NOTICE.md for the full record."
+    "verseOrder": "Every text file carries a verseOrder derived by reading the file. \"monotonic\": true means verse numbers ascend within each chapter. Where it is false, either outOfOrderChapters names the chapters that do not -- Charles transposed verses he judged displaced, and this collection follows his arrangement rather than renumbering it -- or \"scope\": \"whole file\" means the file has no chapter headings and its numbers do not form a single ascending run. Do not assume a monotonic sequence when iterating. Two further keys appear where a file needs them: \"chapterOrder\", present only when the chapters themselves do not run in ascending order, and \"gaps\", naming the chapters whose verse numbers skip. Neither affects the meaning of \"monotonic\", which is only ever about verse numbers inside a chapter.",
+    "rights": "Every file carries a rights status and a basis. \"public-domain\" is asserted per file, never in bulk. Files whose basis could not be established carry status \"unverified\"; one file is \"cc-by-nc-nd-4.0\" and is NOT public domain. See NOTICE.md for the full record.",
+    "encoding": "Every markdown file in the collection is UTF-8 with LF line endings; a .gitattributes file keeps them that way. Read them as UTF-8, without encoding detection, and the ^...$ anchored patterns below will match whether the file came from a checkout or over HTTP.",
+    "structure": "Some file entries carry a `structure` object saying where the translation sits inside the file and how it is divided. For a sectioned-prose file that is `sectionHeading` (and, where the sections are numbered, `sectionNumber`, whose first capture group is the number). For a prose-with-apparatus file it is `sections`, one entry per part of the file, each marked \"translation\", \"editorial\" or \"mixed\", with `textStart` and `textEnd` naming the first and last line of the translated run inside a part that holds one. Anything not marked \"translation\" is the translator's own matter, or the chrome of the site the file was taken from, and must not be served as text."
   },
   "formats": {
     "chapter-caps-verse-lines": {
@@ -57,6 +59,13 @@
         "verses are not guaranteed to appear in numerical order; see verseOrder on each file"
       ]
     },
+    "cv-paragraphs-ranged": {
+      "media": "text/markdown",
+      "description": "As cv-paragraphs, but the roman numeral in the chapter heading is required rather than optional, and a verse marker may name a range (`<chapter>:<first>-<last>`) where the printed edition numbers two verses together. Used for a rendering derived from a prose-with-apparatus file whose printed chapter and verse numbers ran inside the prose and have been lifted out. The translation is delimited by bodyDelimiter. Verse numbers are the printed edition's: they may skip, and the chapters are not guaranteed to ascend. See verseOrder on each file.",
+      "chapterHeading": "^CHAPTER (\\d+) \\(([IVXLC]+)\\)$",
+      "verse": "^(\\d+):(\\d+)(?:-(\\d+))? (.*)$",
+      "bodyDelimiter": "^={70,}$"
+    },
     "numbered-paragraphs": {
       "media": "text/markdown",
       "description": "No chapters. Sections or paragraphs are blank-line-separated and open `<n>. `.",
@@ -71,13 +80,19 @@
     },
     "sectioned-prose": {
       "media": "text/markdown",
-      "description": "Named section headings on their own lines, followed by prose paragraphs. No verse numbers. Any bare numbers in the running text are manuscript page numbers, not verses.",
+      "description": "Named section headings on their own lines, followed by prose paragraphs. No verse numbers. Any bare numbers in the running text are manuscript page numbers, not verses. The translation is delimited by bodyDelimiter: the translator's front matter stands before the first such rule and the translator's notes after the second, and neither is part of the text. Headings are named rather than numbered, and the naming convention differs from one translation to the next, so each file entry carries its own sectionHeading pattern; where the sections are numbered it also carries sectionNumber, whose first capture group is that number. Match sectionHeading only inside the body: the translator's notes discuss sections by name and will otherwise match.",
       "chapterHeading": null,
-      "verse": null
+      "verse": null,
+      "bodyDelimiter": "^={70,}$",
+      "sectionHeading": null,
+      "caveats": [
+        "sectionHeading is declared per file, not here",
+        "a heading may wrap onto a second line; see the notes on each file"
+      ]
     },
     "prose-with-apparatus": {
       "media": "text/markdown",
-      "description": "Continuous prose in which the translator's introduction, notes and the text itself are interleaved, with no consistent machine-readable structure. Suitable for reading and full-text search; not suitable for verse-level extraction without hand work.",
+      "description": "Continuous prose in which the translator's introduction, notes and the text itself are interleaved, with no consistent machine-readable structure. Suitable for reading and full-text search; not suitable for verse-level extraction without hand work. Where the parts of a file could be told apart by hand, its entry carries a `structure.sections` list naming each part and saying whether it is translation or the translator's own matter; where the text could be lifted out whole, the entry carries `derivedFile` naming a verse-addressable rendering of it in the same directory.",
       "chapterHeading": null,
       "verse": null
     },
@@ -1239,7 +1254,30 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "The Greek recension. Chapter numbers are lower-case roman and verse numbers are set inline within indented prose; there is no line-per-verse structure."
+          "notes": "The Greek recension, and the edition of record. Chapter numbers are lower-case roman and verse numbers are set inline within indented, hard-wrapped prose; one chapter marker (xxvii) falls mid-line. For verse-level use read the derived file named in derivedFile instead.",
+          "derivedFile": "books/Life of Adam and Eve/Apocalypse_of_Moses_CCEL_verses.md"
+        },
+        {
+          "path": "books/Life of Adam and Eve/Apocalypse_of_Moses_CCEL_verses.md",
+          "format": "cv-paragraphs-ranged",
+          "edition": "R. H. Charles, The Apocrypha and Pseudepigrapha of the Old Testament (1913)",
+          "translator": "R. H. Charles",
+          "source": {
+            "name": "Christian Classics Ethereal Library",
+            "url": "https://www.ccel.org/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "derivedFrom": "books/Life of Adam and Eve/Apocalypse_of_Moses_CCEL.md",
+          "notes": "Derived mechanically from the CCEL file: Charles's chapter and verse numbers have been lifted out of the running prose and set at the head of the passage each one opens, and the scan's line wrapping removed. No word of the translation was changed. 43 chapters, 160 verses. Five verse markers are ranges (18:2-3, 18:5-6, 27:1-2, 29:1-2, 32:1-2) because Charles numbers those verses together. Verse divisions fall mid-sentence, as they do in his printed text.",
+          "verseOrder": {
+            "monotonic": true,
+            "chapterOrder": "not ascending: chapter 39 stands before chapter 38, as Charles arranged them",
+            "gaps": "chapters 13, 24, 27, 29, 33, 39 and 40 skip verse numbers"
+          }
         },
         {
           "path": "books/Life of Adam and Eve/Apocalypse_of_Moses.pdf",
@@ -1379,7 +1417,12 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Section headings read `Saying <n>: <title>`, one per logion."
+          "notes": "115 sections: an unnumbered Prologue followed by the 114 logia, each headed `Saying <n>: <title>`. The heading of Saying 47 wraps onto a second line. The line `The Gospel According to Thomas`, last inside the body, is the ancient colophon rather than a section.",
+          "structure": {
+            "sectionHeading": "^(Prologue|Saying \\d+: .+)$",
+            "sectionNumber": "^Saying (\\d+): ",
+            "sections": 115
+          }
         }
       ],
       "notes": "The Thomas O. Lambdin translation (The Nag Hammadi Library in English, 1977) was removed from this directory: it is under copyright. See NOTICE.md."
@@ -1407,7 +1450,11 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Bare numbers in the running text are manuscript page numbers, not verses."
+          "notes": "Five sections, headed in capitals. Bare numbers in the running text are manuscript page numbers, not verses. Rules of hyphens inside the body separate sections and set off the two notices of missing manuscript pages; the rules of equals signs are the body delimiters. `The Gospel According to Mary`, last inside the body, is the ancient colophon rather than a section.",
+          "structure": {
+            "sectionHeading": "^[A-Z][A-Z ]+$",
+            "sections": 5
+          }
         },
         {
           "path": "books/Gospel of Mary/Gospel_of_Mary_Interlinear.pdf",
@@ -1485,7 +1532,11 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Bare numbers in the running text are codex page numbers, not verses. The final section, NOTES ON TRANSLATION, is the translator's apparatus rather than text."
+          "notes": "18 sections, headed in capitals. Bare numbers in the running text are codex page numbers, not verses. NOTES ON TRANSLATION is the translator's apparatus and stands after the closing body delimiter; it matches sectionHeading, so match only inside the body.",
+          "structure": {
+            "sectionHeading": "^[A-Z][A-Z, ]+$",
+            "sections": 18
+          }
         }
       ],
       "notes": "The Wesley W. Isenberg translation (The Nag Hammadi Library) was removed from this directory: it is under copyright. See NOTICE.md."
@@ -1512,7 +1563,12 @@
             "basis": "dedication"
           },
           "scripture": true,
-          "primary": true
+          "primary": true,
+          "structure": {
+            "sectionHeading": "^[A-Z][A-Za-z' ]+$",
+            "sections": 7
+          },
+          "notes": "Seven sections, headed in title case. The eighth line inside the body that matches sectionHeading, `The Gospel of Judas`, is the ancient colophon repeating the title, not a section."
         },
         {
           "path": "books/Gospel of Judas/Gospel_of_Judas.pdf",
@@ -1633,7 +1689,72 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "Includes James's introduction and notes interleaved with the text, plus the Ethiopic version he argued best represents the original."
+          "notes": "James's introduction, his notes and the translations he prints are interleaved with nothing in the file to tell them apart; structure.sections marks the boundaries. The file is a scrape of earlychristianwritings.com and keeps that site's navigation and copyright chrome at the head and foot.",
+          "structure": {
+            "sectionHeading": "^(Introduction|Texts of the Apocalypse of Peter|A\\.|B\\.|E\\.|APPENDIX|THE AKHMIM FRAGMENT|THE BODLEIAN LEAF|THE ETHIOPIC TEXT|SECOND BOOK OF THE SIBYLLINE ORACLES, 190-338)$",
+            "frontMatter": "everything before the line `Introduction`: site navigation, then the title and edition statement",
+            "sections": [
+              {
+                "heading": "Introduction",
+                "content": "editorial",
+                "note": "James on the witnesses to the text and its early reception"
+              },
+              {
+                "heading": "Texts of the Apocalypse of Peter",
+                "content": "editorial",
+                "note": "a bare heading over the sections that follow"
+              },
+              {
+                "heading": "A.",
+                "content": "mixed",
+                "note": "six patristic quotations of the Apocalypse, each introduced and followed by James's own description of its source. Quotation and commentary are not separable by pattern."
+              },
+              {
+                "heading": "B.",
+                "content": "editorial",
+                "note": "a bare letter heading over THE AKHMIM FRAGMENT"
+              },
+              {
+                "heading": "THE AKHMIM FRAGMENT",
+                "content": "translation",
+                "textStart": "^1 Many of them shall be false prophets",
+                "textEnd": "^34 And yet others near unto them",
+                "note": "one editorial sentence stands between the heading and textStart. The translated run carries James's verse numbers 1-34 inline. The same fragment is verse-addressable in Apocalypse_of_Peter_Roberts-Donaldson.md."
+              },
+              {
+                "heading": "THE BODLEIAN LEAF",
+                "content": "translation",
+                "textStart": "^Recto=Gr\\. 33, 34:",
+                "textEnd": "^Verso:",
+                "note": "two lines of translation, each opening with the side of the leaf it comes from; one editorial sentence precedes them."
+              },
+              {
+                "heading": "THE ETHIOPIC TEXT",
+                "content": "translation",
+                "textStart": "^The Second Coming of Christ and Resurrection of the Dead",
+                "textEnd": "^And we prayed and went down from the mountain",
+                "note": "the fullest witness, and the one James argued is closest to the original. One editorial sentence precedes textStart; eleven paragraphs of James's commentary follow textEnd to the end of the section."
+              },
+              {
+                "heading": "E.",
+                "content": "editorial",
+                "note": "a bare letter heading over the appendix"
+              },
+              {
+                "heading": "APPENDIX",
+                "content": "editorial",
+                "note": "a bare heading over the Sibylline extract"
+              },
+              {
+                "heading": "SECOND BOOK OF THE SIBYLLINE ORACLES, 190-338",
+                "content": "translation",
+                "textStart": "^190 Woe unto all them that are found great with child",
+                "textEnd": "^And unto them, the godly, shall the almighty and immortal God",
+                "note": "not the Apocalypse of Peter but the Sibylline paraphrase of it, which James appends for comparison. Line numbers of the Greek appear inline. Two editorial sentences precede textStart and two paragraphs, introducing some later iambic lines, follow textEnd."
+              }
+            ],
+            "trailing": "from the line `Go to the Chronological List of all Early Christian Writings` to the end of the file is earlychristianwritings.com site chrome, not part of the text"
+          }
         },
         {
           "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_Roberts-Donaldson.md",

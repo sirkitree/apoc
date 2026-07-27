@@ -796,6 +796,8 @@ The Gospel
 
 According to Philip
 
+================================================================================
+
 NOTES ON TRANSLATION
 
 Page 52: since the day Christ came. It's not clear whether this phrase is the

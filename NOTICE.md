@@ -184,6 +184,7 @@ Project Gutenberg boilerplate, not to the scripture.
 | File | Translation | Basis |
 |------|------------|-------|
 | `Apocalypse_of_Moses_CCEL.md` | The R. H. Charles translation of the Greek *Apocalypse of Moses* (1913), via the Christian Classics Ethereal Library | **Age (US + UK)** -- published 1913; Charles died 1931 |
+| `Apocalypse_of_Moses_CCEL_verses.md` | The same Charles translation, rearranged so that his chapter and verse numbers stand at the head of each passage instead of inside the prose. No word of the translation was changed, so the rights are those of the file it was derived from | **Age (US + UK)** -- as above |
 | `Apocalypse_of_Moses.pdf` | The same Charles 1913 translation; the PDF's own header reads "R.H. Charles Oxford: The Clarendon Press, 1913" | **Age (US + UK)** -- as above |
 | `Life_of_Adam_and_Eve.pdf` | "English translation by B. Custis with the assistance of G. Anderson and R. Layton" -- a modern scholarly translation of the Latin *Vita Adae et Evae*, with no date or rights statement in the file | **UNVERIFIED** |
 
