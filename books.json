@@ -1689,7 +1689,8 @@
           },
           "scripture": true,
           "primary": true,
-          "notes": "James's introduction, his notes and the translations he prints are interleaved with nothing in the file to tell them apart; structure.sections marks the boundaries. The file is a scrape of earlychristianwritings.com and keeps that site's navigation and copyright chrome at the head and foot.",
+          "notes": "James's introduction, his notes and the translations he prints are interleaved with nothing in the file to tell them apart; structure.sections marks the boundaries. The file is a scrape of earlychristianwritings.com and keeps that site's navigation and copyright chrome at the head and foot. This is the edition of record; for reading or display use the derived file named in derivedFile.",
+          "derivedFile": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James_text.md",
           "structure": {
             "sectionHeading": "^(Introduction|Texts of the Apocalypse of Peter|A\\.|B\\.|E\\.|APPENDIX|THE AKHMIM FRAGMENT|THE BODLEIAN LEAF|THE ETHIOPIC TEXT|SECOND BOOK OF THE SIBYLLINE ORACLES, 190-338)$",
             "frontMatter": "everything before the line `Introduction`: site navigation, then the title and edition statement",
@@ -1754,6 +1755,27 @@
               }
             ],
             "trailing": "from the line `Go to the Chronological List of all Early Christian Writings` to the end of the file is earlychristianwritings.com site chrome, not part of the text"
+          }
+        },
+        {
+          "path": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James_text.md",
+          "format": "sectioned-prose",
+          "edition": "M. R. James, The Apocryphal New Testament (Oxford: Clarendon Press, 1924)",
+          "translator": "M. R. James",
+          "source": {
+            "name": "earlychristianwritings.com",
+            "url": "http://www.earlychristianwritings.com/"
+          },
+          "rights": {
+            "status": "public-domain",
+            "basis": "age-us-uk"
+          },
+          "scripture": true,
+          "derivedFrom": "books/Apocalypse of Peter/Apocalypse_of_Peter_MR_James.md",
+          "notes": "The three witnesses to the Apocalypse that James translates in full -- the Akhmim fragment, the Bodleian leaf and the Ethiopic text -- lifted out of the source file under the headings he gave them, with his introduction, his notes on each witness, his commentary and the scraped site chrome dropped. No word of the translation was changed. Two parts of the source are deliberately not in the body. The section headed `A.` is omitted outright: it interleaves six patristic quotations with James's own account of each one, inseparably, so serving it would serve his commentary as scripture. The Second Book of the Sibylline Oracles, which paraphrases the Apocalypse rather than being it, is kept after the closing body delimiter -- present for a reader, outside the text for a parser -- under a heading saying so. James's Akhmim verse numbers are left inline where he printed them; that fragment is separately verse-addressable in Apocalypse_of_Peter_Roberts-Donaldson.md.",
+          "structure": {
+            "sectionHeading": "^THE [A-Z ]+$",
+            "sections": 3
           }
         },
         {

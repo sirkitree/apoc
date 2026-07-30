@@ -121,7 +121,8 @@ Perhaps the most far-reaching legacy of the Apocalypse of Peter is its role in s
 
 | File | Description |
 |------|-------------|
-| `Apocalypse_of_Peter_MR_James.md` | M. R. James translation (1924) from *The Apocryphal New Testament* (Oxford: Clarendon Press). Includes James's introduction, notes, and the Ethiopic text, which he argued best represents the original. |
+| `Apocalypse_of_Peter_MR_James.md` | M. R. James translation (1924) from *The Apocryphal New Testament* (Oxford: Clarendon Press). Includes James's introduction, notes, and the Ethiopic text, which he argued best represents the original. This is the edition of record. |
+| `Apocalypse_of_Peter_MR_James_text.md` | The same translation with the apparatus removed: only the three witnesses James translates in full -- the Akhmim fragment, the Bodleian leaf and the Ethiopic text -- under his own headings. Nothing of the translation was changed. His section of patristic quotations is left out, because his commentary on each quotation cannot be separated from it; the Sibylline paraphrase he appends is kept at the foot of the file, marked as not being the Apocalypse. |
 | `Apocalypse_of_Peter_MR_James.html` | HTML version of the M. R. James translation. |
 | `Apocalypse_of_Peter_Roberts-Donaldson.md` | Roberts-Donaldson translation from the *Ante-Nicene Fathers* series. Based on the Akhmim Greek fragment. |
 | `Apocalypse_of_Peter_Roberts-Donaldson.html` | HTML version of the Roberts-Donaldson translation. |

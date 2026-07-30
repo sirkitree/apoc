@@ -118,6 +118,7 @@ Project Gutenberg boilerplate, not to the scripture.
 | File | Translation | Basis |
 |------|------------|-------|
 | `Apocalypse_of_Peter_MR_James.md`, `.html` | M. R. James, *The Apocryphal New Testament* (Oxford: Clarendon Press, 1924) | **Age (US + UK)** -- published 1924; James died 1936 |
+| `Apocalypse_of_Peter_MR_James_text.md` | The same James translation, with his introduction, notes and commentary removed so that only the three witnesses he translates in full remain. No word of the translation was changed, so the rights are those of the file it was derived from | **Age (US + UK)** -- as above |
 | `Apocalypse_of_Peter_Roberts-Donaldson.md`, `.html` | Roberts-Donaldson, *Ante-Nicene Fathers* (1867--1886) | **Age (US + UK)** -- published 1867--1886 |
 | `The_Apocalypse_of_Peter_James.pdf` | The M. R. James translation | **Age (US + UK)** -- as above |
 | `The_Apocalypse_of_Peter_Schaff.pdf` | Philip Schaff's collection, drawing on the *Ante-Nicene Fathers* | **Age (US + UK)** -- Schaff died 1893 |
